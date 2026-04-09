@@ -1,0 +1,27 @@
+body {
+    background-image: url(../../img/banner/bgimage.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+/* this css line of code is for drop down menu/submenu */
+  .dropdown-submenu {
+    position: relative;
+  }
+  
+  .dropdown-submenu a::after {
+    transform: rotate(-90deg);
+    position: absolute;
+    right: 6px;
+    top: .8em;
+  }
+  
+  .dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-left: .1rem;
+    margin-right: .1rem;
+justify-items: space-between;
+  }
+
+  /*END*/

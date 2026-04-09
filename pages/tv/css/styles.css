@@ -1,0 +1,132 @@
+body {
+  background-image: url(../../assets/img/banner/bgimage.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*the first slider*/
+.site-slider
+{
+  position:relative;
+}
+
+/* .position-top
+{
+  position: absolute;
+  top:50%;
+} */
+    /*this is for the backgrounds of the arrows*/
+.site-slider .slider-btn .prev,
+.site-slider .slider-btn .next
+{
+  background-color: var(--primary-color);
+  padding: 1rem 1.5rem;
+  border-radius: 10rem;
+  color: rgb(240, 109, 10);
+  margin: 0 1rem;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.site-slider:hover .slider-btn .prev,
+.site-slider:hover .slider-btn .next
+{
+  opacity: 1;
+}
+
+.right-0
+{
+  right:0;
+}
+
+/*creating slider dots*/
+.slick-dots
+{
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding:1rem 0;
+  list-style-type: none;
+  position: absolute;
+  bottom: 0%;
+  right: 50%;
+}
+.slick-dots li
+{
+  margin: 0 0.6rem;
+}
+
+.slick-dots button
+{
+   display: block;
+   width: 0.5rem;
+   height: 0.5rem;
+   padding: 0;
+   border: none;
+   background-color: white;
+   text-indent: -99999px;
+   border-radius: 100%;
+}
+/*this is for the dots to enlarge while play time*/
+
+.slick-dots li.slick-active button
+{
+  transform: scale(2.5);
+  box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.205);
+}
+
+/*The body part begins here*/
+
+.box
+{
+  
+  position: relative;
+  display: inline-block;
+}
+
+.box2
+{
+ 
+  position: relative;
+  display: flex;
+}
+
+.box .text-first
+{
+  position: absolute;
+  z-index: 999;
+  margin: 0 auto;
+  left: 0%;
+  right: 0;
+  top: 28%;
+  width: 90%;
+}
+.box2 .text-second
+{
+  position: absolute;
+  z-index: 999;
+  margin: 0 auto;
+  left: 28%;
+  right: 0;
+  top: 22%;
+  width: 90%;
+}
+/* .text-first
+{
+  font-family: cursive;
+  font-size: 44px;
+  font-weight: bolder;
+}
+.text-second
+{
+  font-family: monospace;
+  font-size: 25px;
+  text-align: center;
+} */
+
+/* .section-body
+{
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 70px;
+} */

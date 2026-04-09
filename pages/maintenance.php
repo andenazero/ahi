@@ -1,0 +1,354 @@
+<?php
+include('./../assets/function/session.php');
+// session_start();
+$name = $_SESSION['login_user'];
+?>
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>AHI ERP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/KStyle.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-all.min.css">
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <nav class="navbar align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0 navbar-dark">
+            <div class="container-fluid d-flex flex-column p-0"><a
+                    class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0"
+                    href="./../ict.php"><img class="border rounded-circle img-profile"
+                        src="../assets/img/avatars/final%205.png" width="41" height="41">
+                    <div class="sidebar-brand-icon rotate-n-15"></div>
+                    <div class="sidebar-brand-text mx-3"><small>Animal Health</small>
+                        <div><small>Institute - AHI</small></div>
+                    </div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a class="nav-link" href="index.php"><i
+                                class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="profile.php"><i
+                                class="fas fa-user"></i><span>Profile</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="table.php"><i
+                                class="fas fa-table"></i><span>Table</span></a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="login.php"><i class="far fa-user-circle"></i><span>Related Pages</span></a></li> -->
+                    <li class="nav-item"><a class="nav-link" href="register.php"><i
+                                class="fas fa-user-circle"></i><span>Register</span></a></li>
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0"
+                        id="sidebarToggle" type="button"></button></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-expand bg-white shadow mb-4 topbar">
+                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3"
+                            id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
+                        <form class="d-none d-sm-inline-block me-auto ms-md-3 my-2 my-md-0 mw-100 navbar-search">
+                            <div class="input-group"><input class="bg-light form-control border-0 small" type="text"
+                                    placeholder="Search for ..."><button class="btn btn-primary py-0" type="button"><i
+                                        class="fas fa-search"></i></button></div>
+                        </form>
+                        <ul class="navbar-nav flex-nowrap ms-auto">
+                            <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link"
+                                    aria-expanded="false" data-bs-toggle="dropdown" href="#"><i
+                                        class="fas fa-search"></i></a>
+                                <div class="dropdown-menu dropdown-menu-end p-3 animated--grow-in"
+                                    aria-labelledby="searchDropdown">
+                                    <form class="me-auto navbar-search w-100">
+                                        <div class="input-group"><input class="bg-light border-0 form-control small"
+                                                type="text" placeholder="Search for ..."><button class="btn btn-primary"
+                                                type="button"><i class="fas fa-search"></i></button></div>
+                                    </form>
+
+                                </div>
+
+                            </li>
+                            <li class="nav-item dropdown no-arrow mx-1">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link"
+                                        aria-expanded="false" data-bs-toggle="dropdown" href="#"><span
+                                            class="badge bg-danger badge-counter">3+</span><i
+                                            class="fas fa-bell fa-fw"></i></a>
+                                    <div class="dropdown-menu dropdown-menu-end dropdown-list animated--grow-in">
+                                        <h6 class="dropdown-header">alerts center</h6><a
+                                            class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="me-3">
+                                                <div class="bg-primary icon-circle"><i
+                                                        class="fas fa-file-alt text-white"></i></div>
+                                            </div>
+                                            <div><span class="small text-gray-500">December 12, 2019</span>
+                                                <p>A new monthly report is ready to download!</p>
+                                            </div>
+                                        </a><a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="me-3">
+                                                <div class="bg-success icon-circle"><i
+                                                        class="fas fa-donate text-white"></i></div>
+                                            </div>
+                                            <div><span class="small text-gray-500">December 7, 2019</span>
+                                                <p>$290.29 has been deposited into your account!</p>
+                                            </div>
+                                        </a><a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="me-3">
+                                                <div class="bg-warning icon-circle"><i
+                                                        class="fas fa-exclamation-triangle text-white"></i></div>
+                                            </div>
+                                            <div><span class="small text-gray-500">December 2, 2019</span>
+                                                <p>Spending Alert: We've noticed unusually high spending for your
+                                                    account.</p>
+                                            </div>
+                                        </a><a class="dropdown-item text-center small text-gray-500" href="#">Show All
+                                            Alerts</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown no-arrow mx-1">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link"
+                                        aria-expanded="false" data-bs-toggle="dropdown" href="#"><span
+                                            class="badge bg-danger badge-counter">7</span><i
+                                            class="fas fa-envelope fa-fw"></i></a>
+                                    <div class="dropdown-menu dropdown-menu-end dropdown-list animated--grow-in">
+                                        <h6 class="dropdown-header">alerts center</h6><a
+                                            class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="dropdown-list-image me-3"><img class="rounded-circle"
+                                                    src="../assets/img/avatars/girl profile.jpg">
+                                                <div class="bg-success status-indicator"></div>
+                                            </div>
+                                            <div class="fw-bold">
+                                                <div class="text-truncate"><span>Hi there! I am wondering if you can
+                                                        help me with a problem I've been having.</span></div>
+                                                <p class="small text-gray-500 mb-0">Tigist - 58m</p>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="dropdown-list-image me-3"><img class="rounded-circle"
+                                                    src="../assets/img/avatars/boy profile.jpg">
+                                                <div class="status-indicator"></div>
+                                            </div>
+                                            <div class="fw-bold">
+                                                <div class="text-truncate"><span>I have the photos that you ordered last
+                                                        month!</span></div>
+                                                <p class="small text-gray-500 mb-0">Abebe - 1d</p>
+                                            </div>
+                                        </a>
+
+                                        <a class="dropdown-item text-center small text-gray-500" href="#">Show All
+                                            Alerts</a>
+                                    </div>
+                                </div>
+                                <div class="shadow dropdown-list dropdown-menu dropdown-menu-end"
+                                    aria-labelledby="alertsDropdown"></div>
+                            </li>
+                            <div class="d-none d-sm-block topbar-divider"></div>
+                            <li class="nav-item dropdown no-arrow">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link"
+                                        aria-expanded="false" data-bs-toggle="dropdown" href="#"><span
+                                            class="d-none d-lg-inline me-2 text-gray-600 small">
+                                            
+                                            <?php echo 'login as| ' . $_SESSION['login_user']; ?>
+                                        </span><img class="border rounded-circle img-profile"
+                                            src="../assets/img/avatars/boy%20profile.jpg" width="41" height="41"></a>
+                                    <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in">
+                                        <a class="dropdown-item" href="#"><i
+                                                class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a>
+                                        <a class="dropdown-item" href="#"><i
+                                                class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Settings</a>
+                                        <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#myModal"><i
+                                                class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;ICT
+                                            Maintenance</a>
+                                        <div class=" dropdown-divider"></div><a class="dropdown-item"
+                                            href="./../assets/function/logout.php"><i
+                                                class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
+
+                                        <!-- <button type="button" class="btn btn-primary" >ICT Form -->
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-xl-8">
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary fw-bold m-0">Material Requesition Form</h6>
+                                </div>
+
+                                <?php
+                                if(isset($_GET['id']))
+                                $tid=$_GET['id'];
+                                
+                                    include("../assets/function/config.php");
+                                    // SQL query to select data from database
+                                    $sql = "SELECT * FROM ictform WHERE id='$tid'";
+                                    $result = mysqli_query($link, $sql);
+                                    if(mysqli_num_rows($result) > 0)
+                                    {
+                                    $row = mysqli_fetch_assoc($result);
+                                    }
+                                    else{
+                                        header("location: ../admin.php");
+                                    }
+                                    ?>
+                                <!-- Update form -->
+                                <div style="margin: 15px;">
+                                    <form method="POST" action="./../assets/function/ictconfirm.php">
+                                        <div class="form-group row">
+                                            <label for="rid" class="col-sm-3 col-form-label">Request ID</label>
+                                            <div class="col-sm-9">
+                                                <input name="rid" type="text" class="form-control" id="rid"
+                                                    value="<?=$row['id'];?>">
+                                            </div>
+                                        </div><br>
+                                        
+                                        <div class="form-group row">
+                                            <label for="rname" class="col-sm-3 col-form-label">Requested by</label>
+                                            <div class="col-sm-6">
+                                                <input name="rname" type="text" class="form-control" id="rname"
+                                                    value="<?=$row['requestedby'];?>">
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <input name="requesteddate" type="text" class="form-control" id="requesteddate"
+                                                    value="<?=$row['requesteddate'];?>">
+                                            </div>
+                                        </div><br>
+
+                                        <div class="form-group row">
+                                            <label for="equipment" class="col-sm-3 col-form-label">Equipment</label>
+                                            <div class="col-sm-6">
+                                                <input name="equipment" type="text" class="form-control" id="equipment"
+                                                value="<?=$row['equipmenttype'];?>">
+                                            </div>
+
+                                            <div class="col-sm-3">
+                                                <input name="serial" type="text" class="form-control" id="serial"
+                                                value="<?=$row['serialno'];?>">
+                                            </div>
+                                        </div><br>
+                                        
+                                        <div class="form-group row">
+                                            <div class="col-sm-12">
+                                                <input type="text" name="problem" class="form-control" id="problem"
+                                            rows="3" value="<?=$row['problem'];?>"></input>
+                                            </div>
+                                        </div><br>
+
+                                        <hr>
+                                        <div class="form-group row">
+                                            <label for="confirm" class="col-sm-3 col-form-label">Confirmed by</label>
+                                            <div class="col-sm-6">
+                                                <input name="asignedby" type="text"  class="form-control" id="asignedby"
+                                                    value="<?= $name;?>">
+                                            </div>
+
+                                            <div class="col-sm-3">
+                                                <input name="asigenddate" type="date" class="form-control" id="authorizedate"
+                                                    placeholder="Date">
+                                            </div>
+                                        </div><br>
+
+                     
+                                        <!-- here is the button area -->
+                                        <div class="form-group row">
+                                            <div class="col-sm-6">
+                                                <button type="submit" class="btn btn-success"
+                                                    name="update">Confirm</button>
+                                                <!-- <button type="reset" class="btn btn-warning">Cancil</button> -->
+                                            </div>
+                                        </div><br>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- here is the ICT maintenance form -->
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header
+                        <div class="modal-header">
+                            <h4 class="modal-title">ICT Maintenance Form</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div> -->
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <form method="POST" action="./assets/function/ictmaintenance.php">
+                                <div class="form-group row">
+                                    <div class="col-sm-8">
+                                        <input name="fname" type="text" class="form-control" id="fname" placeholder="Requested by">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <input name="requesteddate" type="date" class="form-control" id="requesteddate" placeholder="Date">
+                                    </div>
+                                </div><br>
+
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <input name="type" type="text" class="form-control" id="type"
+                                            placeholder="Equipment type">
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <input name="serial" type="text" class="form-control" id="serial" placeholder="Serial No.">
+                                    </div>
+                                </div><br>
+
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+
+                                        <label for="exampleFormControlTextarea1" class="form-label">Specify the problem
+                                            under 100 words</label>
+                                        <textarea name="problem" class="form-control" id="problem"
+                                            rows="3"></textarea>
+                                    </div>
+                                </div><br>
+
+                                <!-- here is the button area -->
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <button type="submit" class="btn btn-success">Submit</button>
+                                        <button type="reset" class="btn btn-danger">Clear</button>
+                                    </div>
+                                </div><br>
+
+                            </form>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- ends of the maintenance form -->
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>Copyright © AHI2024</span></div>
+                </div>
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <script src="./../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./../assets/js/chart.min.js"></script>
+    <script src="./../assets/js/bs-init.js"></script>
+    <script src="./../assets/js/theme.js"></script>
+</body>
+
+</html>
