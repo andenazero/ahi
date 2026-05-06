@@ -162,8 +162,8 @@ if ($status != "property") {
                                                 class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a>
                                         <a class="dropdown-item" href="#"><i
                                                 class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Settings</a>
-                                        <a class="dropdown-item" href="#"><i
-                                                class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Activity
+                                        <a class="dropdown-item" href="propertyf.php"><i
+                                                class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;IFMIS reg
                                             log</a>
                                         <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#myModal"><i
                                                 class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;ICT
@@ -192,7 +192,7 @@ if ($status != "property") {
                         ?>
                         <!-- </div> -->
                         <a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#"><i
-                                class="fas fa-download fa-sm text-white-50"></i>&nbsp;Generate Report</a>
+                                class="fas fa-download fa-sm text-white-50"></i>&nbsp;Mobile Card</a>
                     </div>
 
                     <div class="row">
@@ -226,7 +226,7 @@ if ($status != "property") {
                                                     <th width="10%">Allowed</th>
                                                     <th width="15%">No Month</th>
                                                     <th width="10%">Total R</th>
-                                                    <th width="10%">Last Month</th>
+                                                    <!-- <th width="10%">Last Month</th> -->
                                                     <th width="10%">Action</th>
                                                 </tr>
                                             </thead>
@@ -258,14 +258,9 @@ if ($status != "property") {
                                                             <?= $rows['totalMonth']; ?>
                                                         </td>
                                                         <td>
-                                                            <?= $rows['totalAllowed']; ?>
-                                                        </td>
+                                                            <?= ($rows['allowed'])*($rows['totalMonth']); ?>
+                                                        </td>          
                                                         <td>
-                                                            <?= $rows['lastMonth']; ?>
-                                                        </td>
-                                                        <td>
-
-
                                                             <a href="./../../assets/fn/cardauthorized?crid<?= $rows['crid']; ?>"
                                                                 type="button" data-bs-toggle="modal"
                                                                 data-bs-target="#editmodal">
@@ -396,12 +391,12 @@ if ($status != "property") {
                                     
                                 </div><br>
                                 <div class="form-group row">
-                                    <!-- <div class="col-sm-4">
-                                        <input name="totalMonth" type="text" class="form-control" id="totalMonth"
-                                            placeholder="Request id">
-                                    </div> -->
+                                    <div class="col-sm-4">
+                                        <input name="lastMonth" type="text" class="form-control" id="lastMonth"
+                                            placeholder="Last Month">
+                                    </div>
                                     <div class="col-sm-8">
-                                        <input name="approvedby" type="text" class="form-control" id="approvedby"  
+                                        <input name="authorizedby" type="text" class="form-control" id="approvedby"  
                                         value="<?php echo $name; ?>" readonly>
                                     </div>
                                      

@@ -76,9 +76,8 @@ session_start();
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                     <li class="nav-item dropdown">
-
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">Forms
+                            aria-expanded="false">AHI-Portal
                         </a>
                         <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarLevel1">
                             <li>
@@ -87,115 +86,33 @@ session_start();
                             </li>
 
                             <li>
-                                <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#cardModal">MOBILE
-                                    CARD</a>
+                                <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#cardModal">Mobile
+                                    Card Request</a>
                             </li>
 
                             <li>
-                                <a class="dropdown-item" href="./material/Transport Request Form.pdf"
-                                    target="_blank">Transport
-                                    request</a>
+                                <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#reform">Customer
+                                    Satisfaction</a>
                             </li>
+
+                            <li class="dropdown-submenu">
+                                <a id="navbarLevel2" class="dropdown-item dropdown-toggle" href="#" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MoA e-Service</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarLevel2">
+                                    <li>
+                                        <a class="dropdown-item" href="https://moa-portal.et/reform/login.php"
+                                            target="_blank">Institutional Reform
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
                             <li>
-                                <div class="dropdown-divider"></div>
+                                <hr class="dropdown-divider">
                             </li>
-                            <li class="dropdown-submenu">
-                                <a id="navbarLevel2" class="dropdown-item dropdown-toggle" href="#" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reform</a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarLevel2">
-
-                                    <li>
-                                        <a class="dropdown-item" href="./material/reform/የቅሬጻ ማቅረቢያ ቅፃቅፆች.pdf"
-                                            target="_blank">Complain
-                                            form</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" data-bs-toggle="modal"
-                                            data-bs-target="#reform">Customer Satisfaction</a>
-                                    </li>
-                                </ul>
+                            <li><a class="dropdown-item" href="http://silabfa.et:9001/silabfa"
+                                    target="_blank">SILABFA</a>
                             </li>
-
-                            <li class="dropdown-submenu">
-                                <a id="navbarLevel2" class="dropdown-item dropdown-toggle" href="#" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Finance</a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarLevel2">
-
-                                    <li>
-                                        <a class="dropdown-item" href="./material/Finance/አበል የቡድንመሪ(ዴስክ).pdf"
-                                            target="_blank">አበል የቡድንመሪ(ዴስክ)
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="./material/Finance/አበል የቡድን መሪ(ዴስክ) የሌለው.pdf"
-                                            target="_blank">አበል የቡድንመሪ(ዴስክ) የሌለው
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="./material/Finance/የመኪና እጥበትና የቅባቶች ማዘዣ.pdf"
-                                            target="_blank">የመኪና እጥበትና ቅባቶች ማዘዣ
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item"
-                                            href="./material/Finance/የዕቃና የአገልግሎት ወጪ ቅድሚያ መክፈያ ቅጽ ግዢ.pdf"
-                                            target="_blank">የዕቃና የአገልግሎት ወጪ
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="./material/Finance/በመስክ ላይ ለሚፈፀም ክፍያ የሚሞላ ቅጽ.pdf"
-                                            target="_blank">በመስክ ላይ ለሚፈፀም ክፍያ
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <!-- purchasing department forms -->
-                            <li class="dropdown-submenu">
-                                <a id="navbarLevel2" class="dropdown-item dropdown-toggle" href="#" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Purchase</a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarLevel2">
-
-                                    <li>
-                                        <a class="dropdown-item" href="./material/Purchase/form6.pdf"
-                                            target="_blank">የዕቃ ግዥ መጠየቂያ
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="./material/Purchase/form5.pdf"
-                                            target="_blank">የዕቃ ወጪ መጠየቂያ
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="./material/Purchase/form7.pdf"
-                                            target="_blank">የነዳጅ ማሰራጯ
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="./material/Purchase/form4.pdf"
-                                            target="_blank">የበር መውጫ
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="./material/Purchase/form1.pdf"
-                                            target="_blank">wage form
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <!-- <li class="dropdown-submenu">
-                            <a id="navbarLevel3" class="dropdown-item dropdown-toggle" href="#" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Parent3 Chield4</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarLevel3">
-                                <li>
-                                    <a class="dropdown-item" href="#">Parent3 Chield4 Grandchild1</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Parent3 Chield4 Grandchild2</a>
-                                </li>
-                            </ul>
-                        </li> -->
                         </ul>
                     </li>
                     <!-- END -->
@@ -206,24 +123,143 @@ session_start();
                         </a>
                         <ul class="dropdown-menu">
 
+                            <!-- Different forms-->
                             <li class="dropdown-submenu">
                                 <a id="navbarLevel2" class="dropdown-item dropdown-toggle" href="#" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Institutional</a>
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Forms</a>
+
                                 <ul class="dropdown-menu" aria-labelledby="navbarLevel2">
 
-                                    <li>
-                                        <a class="dropdown-item"
-                                            href="./material/reform/AHI-citizen Charter final  for Print.pdf"
-                                            target="_blank">Citizen
-                                            Charter</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="./material/reform/የቅሬታና አቤቱታ መመሪያ.pdf"
-                                            target="_blank">Complain
-                                            procedures</a>
+                                    <!-- Finance department forms -->
+                                    <li class="dropdown-submenu">
+                                        <a id="navbarLevel2" class="dropdown-item dropdown-toggle" href="#"
+                                            role="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">Finance</a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarLevel2">
+
+                                            <li>
+                                                <a class="dropdown-item" href="./material/Finance/አበል የቡድንመሪ(ዴስክ).pdf"
+                                                    target="_blank">አበል የቡድንመሪ(ዴስክ)
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item"
+                                                    href="./material/Finance/አበል የቡድን መሪ(ዴስክ) የሌለው.pdf"
+                                                    target="_blank">አበል የቡድንመሪ(ዴስክ) የሌለው
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item"
+                                                    href="./material/Finance/የመኪና እጥበትና የቅባቶች ማዘዣ.pdf"
+                                                    target="_blank">የመኪና እጥበትና ቅባቶች ማዘዣ
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item"
+                                                    href="./material/Finance/የዕቃና የአገልግሎት ወጪ ቅድሚያ መክፈያ ቅጽ ግዢ.pdf"
+                                                    target="_blank">የዕቃና የአገልግሎት ወጪ
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item"
+                                                    href="./material/Finance/በመስክ ላይ ለሚፈፀም ክፍያ የሚሞላ ቅጽ.pdf"
+                                                    target="_blank">በመስክ ላይ ለሚፈፀም ክፍያ
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </li>
 
-                                    <!-- the forth pop up arrow
+                                    <!-- purchasing department forms -->
+                                    <li class="dropdown-submenu">
+                                        <a id="navbarLevel2" class="dropdown-item dropdown-toggle" href="#"
+                                            role="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">Purchase</a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarLevel2">
+
+                                            <li>
+                                                <a class="dropdown-item" href="./material/Purchase/form6.pdf"
+                                                    target="_blank">የዕቃ ግዥ መጠየቂያ
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="./material/Purchase/form5.pdf"
+                                                    target="_blank">የዕቃ ወጪ መጠየቂያ
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="./material/Purchase/form7.pdf"
+                                                    target="_blank">የነዳጅ ማሰራጯ
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="./material/Purchase/form4.pdf"
+                                                    target="_blank">የበር መውጫ
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="./material/Purchase/form1.pdf"
+                                                    target="_blank">wage form
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="dropdown-submenu">
+                                        <a id="navbarLevel2" class="dropdown-item dropdown-toggle" href="#"
+                                            role="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">Reform</a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarLevel2">
+
+                                            <li>
+                                                <a class="dropdown-item" href="./material/reform/የቅሬጻ ማቅረቢያ ቅፃቅፆች.pdf"
+                                                    target="_blank">Complain
+                                                    form</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="./material/Transport Request Form.pdf"
+                                                    target="_blank">Transport request</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+
+                                    <!-- <li class="dropdown-submenu">
+                                        <a id="navbarLevel3" class="dropdown-item dropdown-toggle" href="#"
+                                            role="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">Parent3
+                                            Chield4</a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarLevel3">
+                                            <li>
+                                                <a class="dropdown-item" href="#">Parent3 Chield4 Grandchild1</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Parent3 Chield4 Grandchild2</a>
+                                            </li>
+                                        </ul> -->
+                                </ul>
+                            <li>
+                                <div class="dropdown-divider"></div>
+                            </li>
+                    </li>
+                    <!-- Documents to read-->
+                    <li class="dropdown-submenu">
+                        <a id="navbarLevel2" class="dropdown-item dropdown-toggle" href="#" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Institutional</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarLevel2">
+
+                            <li>
+                                <a class="dropdown-item"
+                                    href="./material/reform/AHI-citizen Charter final  for Print.pdf"
+                                    target="_blank">Citizen
+                                    Charter</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="./material/reform/የቅሬታና አቤቱታ መመሪያ.pdf"
+                                    target="_blank">Complain
+                                    procedures</a>
+                            </li>
+
+                            <!-- the forth pop up arrow
                                             <li class="dropdown-submenu">
                                         <a id="navbarLevel3" class="dropdown-item dropdown-toggle" href="#" role="button"
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Parent3 Chield4</a>
@@ -235,84 +271,80 @@ session_start();
                                                 <a class="dropdown-item" href="#">Parent3 Chield4 Grandchild2</a>
                                             </li>
                                         </ul> -->
-                                </ul>
-                            </li>
-
-                            <!-- Begins here HR Executive-->
-
-                            <li class="dropdown-submenu">
-                                <a id="navbarLevel2" class="dropdown-item dropdown-toggle" href="#" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Competancy &HR</a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarLevel2">
-
-                                    <li>
-                                        <a class="dropdown-item"
-                                            href="./material/Competency and HR/የመንግሥት ሠራተኞች የድልድል አፈጻጻም መመሪያ 859-2014.pdf"
-                                            target="_blank">CS
-                                            Procedure
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item"
-                                            href="./material/Competency and HR/የተሸከርካሪ አጠቃቀም መመሪያ (1).pdf"
-                                            target="_blank">Transport
-                                            procedures</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="dropdown-submenu">
-                                <a id="navbarLevel2" class="dropdown-item dropdown-toggle" href="#" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Strategic
-                                    Affairs</a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarLevel2">
-
-                                    <li>
-                                        <a class="dropdown-item" href="./material/strategic affair/budget deldel.pdf"
-                                            target="_blank">2017 Anual budget
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item"
-                                            href="./material/strategic affair/photo_2025-05-25_05-43-38.jpg"
-                                            target="_blank">AHI
-                                            Organogram
-                                            procedures</a>
-                                    </li>
-                                </ul>
-                            </li>
-
                         </ul>
-                        <!-- END new lines  -->
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">System
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="http://egp.mofed.gov.et/registration/login"
-                                    target="_blank">eGP</a></li>
-                            <li><a class="dropdown-item" href="#" target="_blank">IFMIS</a></li>
-                            <!--make this to open from mozila firefox-->
-                            <li><a class="dropdown-item" href="#" target="_blank">ICMIS</a></li>
+
+                    <li class="dropdown-submenu">
+                        <a id="navbarLevel2" class="dropdown-item dropdown-toggle" href="#" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Competancy &HR</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarLevel2">
+
                             <li>
-                                <hr class="dropdown-divider">
+                                <a class="dropdown-item"
+                                    href="./material/Competency and HR/የመንግሥት ሠራተኞች የድልድል አፈጻጻም መመሪያ 859-2014.pdf"
+                                    target="_blank">CS
+                                    Procedure
+                                </a>
                             </li>
-                            <li><a class="dropdown-item" href="http://172.27.60.6:9001/silabfa/"
-                                    target="_blank">SILABFA</a></li>
+                            <li>
+                                <a class="dropdown-item" href="./material/Competency and HR/የተሸከርካሪ አጠቃቀም መመሪያ (1).pdf"
+                                    target="_blank">Transport
+                                    procedures</a>
+                            </li>
                         </ul>
                     </li>
 
-                    <li>
-                        <?php if (isset($_SESSION['response'])) { ?>
-                            <div class="alert alert-<?= $_SESSION['types']; ?> alert-dismissible">
-                                <b class="text-center">
-                                    <?= $_SESSION['response']; ?>
-                                </b>
-                            <?php }
-                        unset($_SESSION['response']); ?>
-                        </div>
+                    <li class="dropdown-submenu">
+                        <a id="navbarLevel2" class="dropdown-item dropdown-toggle" href="#" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Strategic
+                            Affairs</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarLevel2">
+
+                            <li>
+                                <a class="dropdown-item" href="./material/strategic affair/budget deldel.pdf"
+                                    target="_blank">2017 Anual budget
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item"
+                                    href="./material/strategic affair/photo_2025-05-25_05-43-38.jpg" target="_blank">AHI
+                                    Organogram
+                                    procedures</a>
+                            </li>
+                        </ul>
                     </li>
+
+                </ul>
+                <!-- END new lines  -->
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">E-Service
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="http://egp.mofed.gov.et/registration/login"
+                                target="_blank">eGP</a></li>
+                        <li><a class="dropdown-item" href="#" target="_blank">ICMIS</a></li>
+                        <li><a class="dropdown-item" href="https://fms.ppa.gov.et/m/SignIn" target="_blank">eFleet</a>
+                        </li>
+                        <li><a class="dropdown-item" href="https://www.eservices.gov.et/en" target="_blank">eService</a></li>
+                        <!--make this to open from mozila firefox-->
+
+                        <li><a class="dropdown-item" href="#" target="_blank">IFMIS</a></li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <?php if (isset($_SESSION['response'])) { ?>
+                        <div class="alert alert-<?= $_SESSION['types']; ?> alert-dismissible">
+                            <b class="text-center">
+                                <?= $_SESSION['response']; ?>
+                            </b>
+                        <?php }
+                    unset($_SESSION['response']); ?>
+                    </div>
+                </li>
                 </ul>
 
                 <form method="POST" action="./assets/function/subscription.php" class="d-flex">
@@ -325,7 +357,6 @@ session_start();
         </div>
     </nav>
     <section class="p-3 text-center text-sm-start">
-
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -349,69 +380,19 @@ session_start();
                 <!--  zero carousel -->
                 <div class="carousel-item active" data-bs-interval="30000">
                     <div class="row">
-
                         <div class="col-md-12 mb-6"
                             style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
-
-                            <div class="container py-4 py-xl-5">
+                            <div class="container py-3 py-xl-4">
                                 <div class="row gy-4 gy-md-0">
-                                    <div class="col-md-4 d-md-flex align-items-md-center" style="height: 450px">
-                                        <div>
+                                    <!-- <div class="col-md-4 d-md-flex align-items-md-center" style="height: 450px"> -->
+                                        <!-- <div> -->
                                             <img class="rounded img-fluid alig-center fit-cover"
-                                                src="./assets/img/pic 06.JPG">
-                                            <div
-                                                style="text-align:center; background-color: rgba(226, 150, 8, 0.5); text-decoration: none;">
-                                                Share our News & updates:
-                                                <a href="https://www.facebook.com/sharer/sharer.php?u=172.27.10.19/ahi/assets/uploads/የሪፎርም%20ዕቅድ%20አፈጻጸም%20ግምገማ.pdf"
-                                                    target="_blank" rel="noopener">
-                                                    <i class="fab fa-facebook-f fa-x"
-                                                        style="color: #3b5998; padding-right:10px; text-decoration: none;"></i>
-                                                </a>
-                                                <!-- Twitter -->
-                                                <a href="https://https://x.com/MoA_NAHDIC">
-                                                    <i class="fab fa-twitter fa-x"
-                                                        style="color: #55acee;padding-right:10px; text-decoration: none;"></i>
-                                                </a>
+                                                src="./assets/img/banner/for portal.jpg">
+                                            
+                                        <!-- </div> -->
 
-                                                <!-- Google -->
-                                                <a href="https://www.youtube.com/@AnimalHealthInstitute">
-                                                    <i class="fab fa-youtube fa-x"
-                                                        style="color: #dd4b39;padding-right:10px;text-decoration: none;"></i>
-                                                </a>
-
-                                                <!-- Linkedin -->
-                                                <i class="fab fa-linkedin-in fa-x"
-                                                    style="color: #0082ca;padding-right:10px;text-decoration: none;"></i>
-
-                                                <!-- telegram -->
-                                                <i class="fab fa-telegram fa-x"
-                                                    style="color: #0082ca;padding-right:10px;text-decoration: none;"></i>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-md-8 d-md-flex align-items-md-center">
-                                        <div style="max-width: 100%;">
-                                            <h2 class="text-uppercase fw-bold" style="margin-right: -50px;">
-                                                የዓለም አቀፉ የእንስሳት ጤና ድርጅት (WOAH) አፈጻጸም (PVS) የክትትልና
-                                                ግምገማ ባለሙያዎች ቡድን ጉብኝት
-                                            </h2>
-                                            <p>ሰኔ 11 ቀን 2017 </p>
-                                            <hr>
-                                            <p class="align-justify" style="align-content: justify;">
-                                                <b>በዓለም አቀፉ የእንስሳት ጤና ድርጅት (WOAH) አፈጻጸም (PVS) የክትትልና ግምገማ ባለሙያዎች ቡድን
-                                                    በእንስሳት ጤና ኢንስቲትዩት በመገኘት አጠቃላይ የእንስሳት ጤና ላይ በሚደረገው የናሙና አወሳሰድ፣
-                                                    የላብራቶሪ መሳሪያዎች ጥራትና ትክክለኛነት እና የእንስሳት ጤና አገልግሎት አፈጻጸም ለማየት ከግብርና
-                                                    ሚኒስቴር የዘርፉ አመራሮች
-                                                    ከእንስሳት ጤና ኢንስቲትዩት ተመራማሪዎች እና ከፍተኛ አመራሮች ጋር ውይይት አድርገዋል፡፡
-                                                </b>
-                                            </p>
-                                            <br>
-                                            <a class="btn btn-warning btn-lg" role="button" href="#">ሙሉውን ለማንበብ</a>
-                                            <a class="btn btn-outline-warning btn-lg" role="button"
-                                                href="./assets/uploads/የዓለም አቀፉ የእንስሳት ጤና ድርጅት.pdf">pdf ያውርዱ</a>
-                                        </div>
-                                    </div>
+                                    <!-- </div> -->
+                                    
                                 </div>
                             </div>
 
@@ -426,65 +407,11 @@ session_start();
                         <div class="col-md-12 mb-6"
                             style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
 
-                            <div class="container py-4 py-xl-5">
+                            <div class="container py-3 py-xl-4">
                                 <div class="row gy-4 gy-md-0">
-                                    <div class="col-md-4 d-md-flex align-items-md-center" style="height: 450px">
-                                        <div>
-                                            <img class="rounded img-fluid alig-center fit-cover"
-                                                src="./assets/img/pic 06.JPG">
-                                            <div
-                                                style="text-align:center; background-color: rgba(226, 150, 8, 0.5); text-decoration: none;">
-                                                Share our News & updates:
-                                                <a href="https://www.facebook.com/sharer/sharer.php?u=172.27.10.19/ahi/assets/uploads/የሪፎርም%20ዕቅድ%20አፈጻጸም%20ግምገማ.pdf"
-                                                    target="_blank" rel="noopener">
-                                                    <i class="fab fa-facebook-f fa-x"
-                                                        style="color: #3b5998; padding-right:10px; text-decoration: none;"></i>
-                                                </a>
-                                                <!-- Twitter -->
-                                                <a href="https://https://x.com/MoA_NAHDIC">
-                                                    <i class="fab fa-twitter fa-x"
-                                                        style="color: #55acee;padding-right:10px; text-decoration: none;"></i>
-                                                </a>
-
-                                                <!-- Google -->
-                                                <a href="https://www.youtube.com/@AnimalHealthInstitute">
-                                                    <i class="fab fa-youtube fa-x"
-                                                        style="color: #dd4b39;padding-right:10px;text-decoration: none;"></i>
-                                                </a>
-
-                                                <!-- Linkedin -->
-                                                <i class="fab fa-linkedin-in fa-x"
-                                                    style="color: #0082ca;padding-right:10px;text-decoration: none;"></i>
-
-                                                <!-- telegram -->
-                                                <i class="fab fa-telegram fa-x"
-                                                    style="color: #0082ca;padding-right:10px;text-decoration: none;"></i>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-md-8 d-md-flex align-items-md-center">
-                                        <div style="max-width: 100%;">
-                                            <h2 class="text-uppercase fw-bold" style="margin-right: -50px;">
-                                                የግብርና ሚኒስቴር እና ተጠሪ ተቋማት የሪፎርም እና
-                                                ታስክ ፎርስ በለውጥ ስራ ሂደት ያለበትን ደረጃ ጎበኙ
-                                            </h2>
-                                            <p>ግንቦት 19 ቀን 2017</p>
-                                            <hr>
-                                            <p class="align-justify" style="align-content: justify;">
-                                                <b>የግብርና ሚኒስቴር እና ተጠሪ ተቋማት የሪፎርም እና ታስክ ፎርስ: ተቋማችን ያለበትን ደረጃ
-                                                    ለመገምገም በእንስሳት ጤና ኢንስቲትዩት ገምግሟል።
-                                                    የሚኒስቴር መ/ቤቱ ተጠሪ ተቋማትና የሲቪል ሰርቪስ ኮሚሽን
-                                                    በተገኙበት የእንስሳት ጤና ኢንስቲትዩት ም/ዋና ዳይሬክተር ዶ/ር ኃ/ማርያም ከፍያለው
-                                                    የእንኳን ደህና መጣችሁ መልዕክት አስተላልፏል።
-                                                </b>
-                                            </p>
-                                            <br>
-                                            <a class="btn btn-warning btn-lg" role="button" href="#">ሙሉውን ለማንበብ</a>
-                                            <a class="btn btn-outline-warning btn-lg" role="button"
-                                                href="./assets/uploads/የሪፎርም ዕቅድ አፈጻጸም ግምገማ.pdf">ሙሉውን ያውርዱ</a>
-                                        </div>
-                                    </div>
+                                    <a href="https://www.eservices.gov.et/en">
+                                        <img class="rounded img-fluid alig-center fit-cover"
+                                                src="./assets/img/banner/eservice.jpg">  </a>                                  
                                 </div>
                             </div>
 
@@ -499,87 +426,31 @@ session_start();
                         <div class="col-md-12 mb-6"
                             style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
 
-                            <div class="container py-4 py-xl-5">
+                            <div class="container py-3 py-xl-4">
                                 <div class="row gy-4 gy-md-0">
-                                    <div class="col-md-4 d-md-flex align-items-md-center" style="height: 450px">
-                                        <div>
-                                            <img class="rounded img-fluid alig-center fit-cover"
-                                                src="./assets/img/pic 04.JPG">
-                                            <div
-                                                style="text-align:center; background-color: rgba(226, 150, 8, 0.5); text-decoration: none;">
-                                                Share our News & updates:
-                                                <a href="https://www.facebook.com/sharer/sharer.php?u=172.27.10.19/ahi/assets/uploads/የሪፎርም%20ዕቅድ%20አፈጻጸም%20ግምገማ.pdf"
-                                                    target="_blank" rel="noopener">
-                                                    <i class="fab fa-facebook-f fa-x"
-                                                        style="color: #3b5998; padding-right:10px; text-decoration: none;"></i>
-                                                </a>
-                                                <!-- Twitter -->
-                                                <a href="https://https://x.com/MoA_NAHDIC">
-                                                    <i class="fab fa-twitter fa-x"
-                                                        style="color: #55acee;padding-right:10px; text-decoration: none;"></i>
-                                                </a>
-
-                                                <!-- Google -->
-                                                <a href="https://www.youtube.com/@AnimalHealthInstitute">
-                                                    <i class="fab fa-youtube fa-x"
-                                                        style="color: #dd4b39;padding-right:10px;text-decoration: none;"></i>
-                                                </a>
-
-                                                <!-- Linkedin -->
-                                                <i class="fab fa-linkedin-in fa-x"
-                                                    style="color: #0082ca;padding-right:10px;text-decoration: none;"></i>
-
-                                                <!-- telegram -->
-                                                <i class="fab fa-telegram fa-x"
-                                                    style="color: #0082ca;padding-right:10px;text-decoration: none;"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8 d-md-flex align-items-md-center">
-                                        <div style="max-width: 100%;">
-                                            <h2 class="text-uppercase fw-bold" style="margin-right: -50px;">
-                                                ከአፋር ፣ ትግራይና አማራ ክልል ለመጡ የላብራቶሪ ሙያተኞች ከህዳር 30 እስከ ታህሳስ 05 2017 በእንስሳት ጤና
-                                                ኢንስቲትዩት ስልጠና ተሰጠ!
-                                            </h2>
-                                            <hr>
-                                            <p class="align-justify" style="align-content: justify;">
-                                                <b>የእንስሳት ጤና ኢንስቲትዩት ከተባበሩተ መንግስታት የአለም ምግብና እርሻ ድርጅት (FAO) ጋር በመቀናጀት
-                                                    ለክልል እንስሳት ጤና ላብራቶሪ ባለሙያዎች እንድሁም ከመቐለ እና ከጎንደር ዩኒቨርሲቲ ለመጡ የዘርፉ
-                                                    ባለሙያዎች ስልጠና ከህዳር 30 እስከ ታህሳስ 05/2017 ሰበታ በሚገኘው የእ.ጤ.ኢ. ላቦራቶሪ ተሰጠ፡፡
-                                                </b>
-                                            </p>
-                                            <br>
-                                            <a class="btn btn-warning btn-lg" role="button" href="#">ሙሉውን ለማንበብ</a>
-                                            <a class="btn btn-outline-warning btn-lg" role="button"
-                                                href="./assets/uploads/አፋር፣ትግራይ፣አማራ_ክልሎች_የተሰጠ_ስልጠና.pdf">ሙሉውን ያውርዱ</a>
-                                        </div>
-                                    </div>
+                                    <a href="">
+                                        <img class="rounded img-fluid alig-center fit-cover"
+                                                src="./assets/img/banner/icmis.jpg">  </a>                                  
                                 </div>
                             </div>
 
                         </div>
                     </div>
                 </div>
+
                 <!-- third carousel -->
                 <div class="carousel-item" data-bs-interval="30000">
                     <div class="row">
-                        <!-- message with image only -->
-
-                        <div class="col-md-4 mb-3">
-                            <div class="card">
-                                <img class="img-fluid" src="./assets/uploads/7.jpg">
-                            </div>
-                        </div>
-
-                        <div class="col-md-4 mb-3">
-                            <div class="card">
-                                <img class="img-fluid" src="./assets/uploads/6.jpg">
-                            </div>
-                        </div>
-
-                        <div class="col-md-4 mb-3">
-                            <div class="card">
-                                <img class="img-fluid" src="./assets/uploads/08.jpg">
+                        <div class="container py-4 py-xl-5">
+                            <div class="row gy-4 gy-md-0">
+                                <div class=" d-md-flex align-items-md-center" style="height: 450px">
+                                    <div class="card">
+                                        <a href="https://pms.moa.gov.et/login">
+                                            <img class="img-fluid"
+                                                src="./assets/img/banner/MoA planning and performance.jpg">
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -589,97 +460,99 @@ session_start();
                 <div class="carousel-item" data-bs-interval="30000">
                     <div class="row">
                         <!-- message with image only -->
-
-                        <div class="col-md-8 mb-3"
-                            style="background-color: rgba(255, 255, 255, 0.7); align-content: center;color:rgb(2, 30, 81);">
-                            <div style="text-align:center;">
-                                <h1 style="margin:10px">እንኳን ወደ እንስሳት ጤና ኢንስቲትዩት <br>የውስጥ መገናኛ ዘዴ በሰላም መጡ!</h1>
-                            </div>
-                            <h4 style="text-align:center; margin:5%">በዚህ መረጃ መስጫ ገጽ፡ ከመረጃ መለዋወጥ ባሻገር የተለያዩ አገልግሎት መጠየቂያ
-                                ፎርሞችን፡ የመንግስትን ዲጂታል አሰራር ለውጥ ተከትሎ በተቋማችን የተተገበሩትን ሲስተም ማስፈንጠሪያዎችና፡ ግልፅ
-                                አሰራርን ለማስፈን የሚረዱ የተለያዩ መተዳደሪያ ደንቦችንና ህጎችን ከዲጂታል ላይብረሪ ማግኘት ይችላሉ፡፡</h4>
-                            <h4 style="text-align:center;">ለበለጠ ንባብ በሚከተሉት ማህበራዊ ሚዲያ ይከታተሉን</h4>
-                            <br>
-                            <hr>
-
-                            <div style="text-align:center;">
-                                <a href="https://web.facebook.com/MoANAHDIC">
-                                    <i class="fab fa-facebook-f fa-2x" style="color: #3b5998;"></i>
-                                </a> &nbsp;&nbsp;
-                                <!-- Twitter -->
-                                <a href="https://https://x.com/MoA_NAHDIC">
-                                    <i class="fab fa-twitter fa-2x" style="color: #55acee;"></i>&nbsp;&nbsp;
-                                </a>
-
-                                <!-- Google -->
-                                <a href="https://www.youtube.com/@AnimalHealthInstitute">
-                                    <i class="fab fa-youtube fa-2x" style="color: #dd4b39;"></i>
-                                </a>&nbsp;&nbsp;
-
-                                <!-- Linkedin -->
-                                <i class="fab fa-linkedin-in fa-2x" style="color: #0082ca;"></i>&nbsp;&nbsp;
-
-                                <!-- telegram -->
-                                <i class="fab fa-telegram fa-2x" style="color: #0082ca;"></i>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4 mb-3">
-                            <div class="card">
-                                <img class="img-fluid" src="./assets/uploads/05.jpg">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Fifth carousel -->
-                <div class="carousel-item" data-bs-title="Animal Health Institute" data-bs-interval="10000">
-                    <div class="row">
-                        <!-- message with image only -->
-                        <div class="col-md-4 mb-3">
-                            <div class="card">
-                                <img class="img-fluid" src="./assets/uploads/06.jpg">
-                            </div>
-                        </div>
-                        <div class="col-md-8 mb-3"
-                            style="background-color: rgba(255, 255, 255, 0.7); align-content: center;color:rgb(2, 30, 81);">
-                            <video controls width="96%">
-                                <source src="./assets/uploads/seg_eng.mp4" type="video/mp4">
-                                <source src="movie.ogg" type="video/ogg">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Fifth carousel -->
-                <div class="carousel-item">
-                    <div class="row">
-
                         <div class="col-md-12 mb-6"
                             style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
-
                             <div class="container py-4 py-xl-5">
                                 <div class="row gy-4 gy-md-0">
+                                    <!-- <div class="col-md-8 d-md-flex align-items-md-center"> -->
+                                        <div style="max-width: 100%;">
+                                            <div style="text-align:center;">
+                                                <h1 style="margin:10px">እንኳን ወደ እንስሳት ጤና ኢንስቲትዩት <br>የውስጥ መገናኛ ዘዴ በሰላም
+                                                    መጡ!</h1>
+                                            </div>
+                                            <h4 style="text-align:center; margin:5%">በዚህ መረጃ መስጫ ገጽ፡ ከመረጃ መለዋወጥ ባሻገር
+                                                የተለያዩ አገልግሎት መጠየቂያ
+                                                ፎርሞችን፡ የመንግስትን ዲጂታል አሰራር ለውጥ ተከትሎ በተቋማችን የተተገበሩትን ሲስተም ማስፈንጠሪያዎችና፡ ግልፅ
+                                                አሰራርን ለማስፈን የሚረዱ የተለያዩ መተዳደሪያ ደንቦችንና ህጎችን ከዲጂታል ላይብረሪ ማግኘት ይችላሉ፡፡</h4>
+                                            <h4 style="text-align:center;">ለበለጠ ንባብ በሚከተሉት ማህበራዊ ሚዲያ ይከታተሉን</h4>
+                                            <br>
+                                            <hr>
+                                        </div>
+                                    <!-- </div> -->
+                                    <div style="text-align:center;">
+                                        <a href="https://web.facebook.com/MoANAHDIC">
+                                            <i class="fab fa-facebook-f fa-2x" style="color: #3b5998;"></i>
+                                        </a> &nbsp;&nbsp;
+                                        <!-- Twitter -->
+                                        <a href="https://https://x.com/MoA_NAHDIC">
+                                            <i class="fab fa-twitter fa-2x" style="color: #55acee;"></i>&nbsp;&nbsp;
+                                        </a>
 
+                                        <!-- Google -->
+                                        <a href="https://www.youtube.com/@AnimalHealthInstitute">
+                                            <i class="fab fa-youtube fa-2x" style="color: #dd4b39;"></i>
+                                        </a>&nbsp;&nbsp;
+
+                                        <!-- Linkedin -->
+                                        <i class="fab fa-linkedin-in fa-2x" style="color: #0082ca;"></i>&nbsp;&nbsp;
+
+                                        <!-- telegram -->
+                                        <i class="fab fa-telegram fa-2x" style="color: #0082ca;"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fifth carousel -->
+
+                <div class="carousel-item" data-bs-interval="30000">
+                    <div class="row">
+                        <div class="container py-4 py-xl-5">
+                            <div class="row gy-4 gy-md-0">
+                                <div class=" d-md-flex align-items-md-center" style="height: 450px">
+                                    <div class="card">
+                                        <a href="https://moa-portal.et/reform/login.php">
+                                            <img class="img-fluid" src="./assets/img/banner/MoA reform2.jpg">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- six carousel -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-12 mb-6"
+                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
+                            <div class="container py-4 py-xl-5">
+                                <div class="row gy-4 gy-md-0">
                                     <div class="col-md-8 d-md-flex align-items-md-center">
                                         <div style="max-width: 100%;">
                                             <h2 class="text-uppercase fw-bold" style="margin-right: -40px;">
-                                                Greening the Grounds: How tree planting makes AHI's compound more
+                                                Greening the Grounds: How tree planting makes AHI's compound
+                                                more
                                                 stimulating!
                                             </h2>
                                             <hr>
                                             <p class="align-justify" style="align-content: justify;">
-                                                In the heart of Ethiopia, a few kilometer from the downtown, Animal
-                                                Health Institute. is taking a significant step towards environmental
+                                                In the heart of Ethiopia, a few kilometer from the downtown,
+                                                Animal
+                                                Health Institute. is taking a significant step towards
+                                                environmental
                                                 stewardship and campus beautification. Beyond the research and
-                                                diagnosing from the labs, a quiet revolution is taking root, quite
-                                                literally, as the institute embraces a robust tree-planting initiative
-                                                aimed at transforming its grounds into a greener, more sustainable
+                                                diagnosing from the labs, a quiet revolution is taking root,
+                                                quite
+                                                literally, as the institute embraces a robust tree-planting
+                                                initiative
+                                                aimed at transforming its grounds into a greener, more
+                                                sustainable
                                                 oasis.
                                             </p>
                                             <br>
-                                            <a class="btn btn-warning btn-lg" role="button" href="#">Read More</a>
+                                            <a class="btn btn-warning btn-lg" role="button" href="#">Read
+                                                More</a>
                                             <a class="btn btn-outline-warning btn-lg" role="button"
                                                 href="./assets/uploads/Greening the GroundsNEWS.pdf">pdf</a>
                                         </div>
@@ -696,62 +569,7 @@ session_start();
                         </div>
                     </div>
                 </div>
-
-                <!-- Six carousel -->
-                <div class="carousel-item">
-                    <div class="row">
-
-                        <div class="col-md-12 mb-6"
-                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
-
-                            <div class="container py-4 py-xl-5">
-                                <div class="row gy-4 gy-md-0">
-
-                                    <div class="col-md-8 d-md-flex align-items-md-center">
-                                        <div style="max-width: 100%;">
-                                            <h2 class="text-uppercase fw-bold" style="margin-right: -40px;">
-                                                የጥንቃቄ መልእክት
-                                            </h2>
-                                            <hr>
-                                            <p class="align-justify" style="align-content: justify;">
-                                            <div>
-                                                የዝንጀሮ ፈንጣጣ በሽታ ሽፍታ ወይም ቁስሎች (ፖክስ)፣ አንዳንዴም በጉንፋን መሰል በሽታን ጨምሮ ሊያሳምም የሚችል
-                                                በሽታ ነው።
-                                                የሚተላለፍበትም መንገድ፡ ቫይረሱ ወደ ማንኛውም ሰው በመቀራረብ፣ በግል ወይም በቆዳ-ለቆዳ ንክኪ ሊሰራጭ ይችላል
-                                                ከዚህም በተጨማሪም፡
-                                            </div>
-                                            <div>
-                                                የዝንጀሮ ፈንጣጣ በሽታ መከላከያ ዘዴዎች
-                                                <ul>
-                                                    <li>የአካል ንክኪ መቀነስ</li>
-                                                    <li>በጋራ የሚጠቀሟቸው እቃዎች ካሉ አለመጠቀም፣</li>
-                                                    <li>የአፍና የአፍንጫ ማስክ መጠቀም፣</li>
-                                                    <li>የግብረ ሥጋ ግንኙነት አለማድረግ፣ </li>
-                                                    <li>ሰልባጅ ጨርቆች ሲገበያዩ ራሳቸውን መጠበቅ እንዳለባቸው አሳስበዋል፣</li>
-                                                </ul>
-
-                                            </div>
-                                            </p>
-                                            <br>
-                                            <a class="btn btn-warning btn-lg" role="button" href="#">Read More</a>
-                                            <a class="btn btn-outline-warning btn-lg" role="button" href="">pdf</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 d-md-flex align-items-md-center" style="height: 450px">
-                                        <div>
-                                            <img class="rounded img-fluid alig-center fit-cover"
-                                                src="./assets/img/pic 09.jpeg">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
             </div>
-
             <!-- Previous and Next button -->
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
                 data-bs-slide="prev">
@@ -797,11 +615,11 @@ session_start();
                             <div class="col-sm-6">
                                 <select class="form-select" name="type" type="text" class="form-control" id="type"
                                     placeholder="Service type" required>
-
-                                    <option value="maintenance">Maintenance</option>
-                                    <option value="networking">Networking</option>
+                                    <option value="Maintenance">Maintenance</option>
+                                    <option value="Networking">Networking</option>
                                     <option value="system suport">System suport</option>
                                     <option value="eGP suport">eGP suport</option>
+                                    <option value="e-service suport">eservice suport</option>
                                     <option value="IFMIS suport">IFMIS suport</option>
                                     <option value="SILABFA suport">SILAB system</option>
                                     <option value="Other Service">Other service</option>
@@ -908,7 +726,7 @@ session_start();
     <div class="modal" id="reform">
         <div class="modal-dialog">
             <div class="modal-content">
-               
+
                 <div class="modal-body">
                     <form method="POST" action="./assets/fn/survailance.php">
                         <div class="form-group text-center color-primary">

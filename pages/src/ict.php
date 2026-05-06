@@ -385,7 +385,7 @@ if ($status != "ict") {
                                     <?php
                                     // include("./../../assets/fn/config.php");
                                     // SQL query to select data from database
-                                    $sqls = "SELECT * FROM ictform WHERE maintainedby='$name' ORDER BY requesteddate ASC";
+                                    $sqls = "SELECT * FROM ictform WHERE maintainedby='$name' AND followups!='Done' ORDER BY requesteddate ASC";
                                     $res_datas = mysqli_query($link, $sqls);
                                     ?>
                                     <div class="table-responsive table mt-2" id="dataTable" role="grid"
@@ -509,13 +509,8 @@ if ($status != "ict") {
                                         <button type="reset" class="btn btn-danger">Clear</button>
                                     </div>
                                 </div><br>
-
                             </form>
-
                         </div>
-
-
-
                     </div>
                 </div>
             </div>
@@ -544,7 +539,8 @@ if ($status != "ict") {
                                             id="type" placeholder="Tech. Name" required>
 
                                             <option value="Tewodros Alemu">Tewodros Alemu</option>
-                                            <option value="Salim Hassen">Salim Hassen</option>
+                                            <option value="Abdurekib Mohammed">Abdurekib Mohammed</option>
+                                            <option value="Abebe Fantaw">Abebe Fantaw</option>
                                             <option value="Bizunesh Alemu">Bizunesh Alemu</option>
                                             <option value="Sadat Zaid">Sadat Zaid</option>
                                             <option value="Other" selected>Others</option>

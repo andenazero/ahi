@@ -8,7 +8,7 @@ $names = $_SESSION['fullName'];
 $dates = $date = date('Y/m/d H:i:s');
 
 // $status ="passive";
-$sql = "UPDATE ictform SET maintaineddate='$dates' WHERE id=$id";
+$sql = "UPDATE ictform SET followups='Done', maintaineddate='$dates' WHERE id=$id";
 $result = mysqli_query($link, $sql);
 if($result){
    header('location: ./../../pages/src/ict.php');

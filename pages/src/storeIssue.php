@@ -118,12 +118,12 @@ if($status!="user")
                 <ul class="navbar-nav text-light" id="accordionSidebar">
                     <li class="nav-item"><a class="nav-link" href="index.php"><i
                                 class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="profile.php"><i
+                    <li class="nav-item"><a class="nav-link" href="#"><i
                                 class="fas fa-user"></i><span>Profile</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="table.php"><i
+                    <li class="nav-item"><a class="nav-link" href="#"><i
                                 class="fas fa-table"></i><span>Table</span></a></li>
                     <!-- <li class="nav-item"><a class="nav-link" href="login.php"><i class="far fa-user-circle"></i><span>Related Pages</span></a></li> -->
-                    <li class="nav-item"><a class="nav-link" href="register.php"><i
+                    <li class="nav-item"><a class="nav-link" href="#"><i
                                 class="fas fa-user-circle"></i><span>Register</span></a></li>
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0"
@@ -278,8 +278,6 @@ if($status!="user")
                                 class="fas fa-download fa-sm text-white-50"></i>&nbsp;Back to
                         </a>
                     </div>
-
-                    
                     <div class="row">
                         <div></div>
                         <div class="col-lg-7 col-xl-12">
@@ -288,36 +286,23 @@ if($status!="user")
                                 <div class="card-body">
                                     <div class="conts">
                                     <?php
-                                        // Define an array with names as keys and their groups as values
-                                        $namesGroups = [
-                                            "Demessa Negera" => "15",
-                                            "Tewodros Alemu" => "9",
-                                            "Dereje Shegu" => "9",
-                                            
-                                            // Add more names and groups as needed
-                                        ];
-
-                                        // Function to check the group of a given name
-                                        function getGroup($name, $array) {
-                                            if (isset($array[$name])) {
-                                                return $array[$name];
-                                            } else {
-                                                return "Name not found in any group.";
-                                            }
-                                        }
-
-                                        // Example usage
-                                        $nameToCheck = $name;
-                                        $amt= getGroup($nameToCheck, $namesGroups); 
-                                        ?>
- 
+                                    include_once('./../../app/info.php');
+                                    $searchName = $name;
+                                    $result = getEmployeeCardDetails($searchName, $data);
+                                    if ($result) {
+                                        $empID=$result['employee_id'];
+                                        $card=$result['allowed_cards'];
+                                    } else {
+                                        echo "Employee not found.";
+                                    }
+                                    ?>                                    
                                         <form method="POST" action="../../assets/fn/cardrequesition.php"> 
                                             <div class="form-group row">
                                                 <div class="col-sm-3">
-                                                    <input name="eid" type="text" class="form-control" id="eid" placeholder="E-ID" required>
+                                                    <input name="eid" type="text" class="form-control" id="eid" placeholder="E-ID" value="<?= $empID; ?>" readonly>
                                                 </div>
                                                 <div class="col-sm-7">
-                                                    <input name="fullName" type="text" class="form-control" id="fname" value="<?= $name;  ?>" required>
+                                                    <input name="fullName" type="text" class="form-control" id="fname" value="<?= $name; ?>" readonly>
                                                 </div>
                                                 
                                             </div><br>
@@ -335,7 +320,7 @@ if($status!="user")
                                                     </select>
                                                 </div>
                                                 <div class="col-sm-4">
-                                                    <input name="ramount" type="text" class="form-control" id="ramount" value="<?=$amt;?>" readonly>
+                                                    <input name="ramount" type="text" class="form-control" id="ramount" value="<?=$card;?>" readonly>
                                                 </div>
                                                 <div class="col-sm-3">
                                                     <input name="totalMonth" type="text" class="form-control" id="totalMonth" placeholder="Total Month"
@@ -346,7 +331,7 @@ if($status!="user")
 
                                             <div class="form-group row">
                                                 <div class="col-sm-6">
-                                                    <input name="description" type="text" class="form-control" id="description" value="<?= "Mobile Card for the month of:";  ?>" readonly>
+                                                    <input name="description" type="text" class="form-control" id="description" value="<?= $card * 1?>" readonly>
                                                 </div>
                                                 <div class="col-sm-4">
                                                     <select class="form-select" name="lastMonth" type="text" class="form-control" id="lastMonth"

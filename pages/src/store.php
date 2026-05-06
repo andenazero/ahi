@@ -211,7 +211,7 @@ if ($status != "store") {
                                     <?php
                                     include("../../assets/fn/config.php");
                                     // SQL query to select data from database
-                                    $sql = "SELECT * FROM card WHERE approvedby!='' AND issuedby='' ORDER BY rdate ASC";
+                                    $sql = "SELECT * FROM card WHERE totalAllowed!='0' AND issuedby='' ORDER BY rdate ASC";
                                     $res_data = mysqli_query($link, $sql);
                                     ?>
                                     <div class="table-responsive table mt-2" id="dataTable" role="grid"
@@ -222,10 +222,10 @@ if ($status != "store") {
                                                     <th width="5%">#</th>
                                                     <th width="10%">CR ID</th>
                                                     <th width="20%">Req. By</th>
-                                                    <th width="15%">Req. Date</th>
-                                                    <th width="10%">No Month</th>
+                                                    <th width="15%">Authorized</th>
+                                                    <th width="10%">Approved</th>
                                                     <th width="10%">Allowed</th>
-                                                    <th width="10%">Toral R.</th>
+                                                    <th width="10%">IFMIS No.</th>
                                                     <th width="10%">Last Month</th>
                                                     <th width="20%">Action</th>
                                                 </tr>
@@ -249,15 +249,15 @@ if ($status != "store") {
                                                             <?= $rows['FullName']; ?>
                                                         </td>
                                                         <td>
-                                                            <?= $rows['rdate']; ?>
+                                                            <?= $rows['approvedby']; ?>
                                                         </td>
                                                         <td>
-                                                            <?= $rows['totalMonth']; ?>
+                                                            <?= $rows['authorizedby']; ?>
                                                         </td>
                                                         <td>
                                                             <?= $rows['allowed']; ?>
                                                         </td>
-                                                        <td>
+                                                        <td> 
                                                             <?= $rows['totalAllowed']; ?>
                                                         </td>
                                                         <td>
