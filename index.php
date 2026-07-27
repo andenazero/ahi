@@ -1,49 +1,8 @@
 <?php
-// include("assets/function/config.php");
 session_start();
-// $error = '';
-// if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-// 	// username and password sent from form 
-// 	$myusername = mysqli_real_escape_string($link, $_POST['email']);
-// 	$mypassword = mysqli_real_escape_string($link, $_POST['password']);
-
-//     $sql = "//SELECT * FROM profile WHERE userName = '$myusername' AND password ='$mypassword'";
-//     $result = mysqli_query($link,$sql);
-//     $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-//     $count = mysqli_num_rows($result);
-
-//     if($count == 1) 
-//     {
-//         // $_SESSION['login_user'] = $Email;
-//         if($row["status"] == "admin") 
-//         { 
-//             $_SESSION['login_user'] = $myusername;
-//             $_SESSION['status'] = $mystatus;
-//             header("location: admin.php");
-//         }else if($row["status"] == "super admin")
-//         { 
-//             $_SESSION['login_user'] = $myusername;
-//             $_SESSION['status'] = $mystatus;
-//             header("location: ./approve.php");
-//         }else if($row["status"] == "ict")
-//         { 
-//             $_SESSION['login_user'] = $myusername;
-//             $_SESSION['status'] = $mystatus;
-//             header("location: ./ict.php");
-//         }
-//         else { 
-//             $_SESSION['login_user'] = $myusername;
-//             $_SESSION['status'] = $mystatus;
-//             header("location: ./user.php");
-//         }
-//     }else 
-//     {
-//      $error = "Your Login Name or Password is invalid";
-//     }
-
-// }
 ?>
+
 
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="en">
@@ -324,7 +283,11 @@ session_start();
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="http://egp.mofed.gov.et/registration/login"
                                 target="_blank">eGP</a></li>
+<<<<<<< Updated upstream
                         <li><a class="dropdown-item" href="#" target="_blank">ICMIS</a></li>
+=======
+                        <li><a class="dropdown-item" href="https://icsmiscscp.ecsc.gov.et/icsmiscsc/portal/Login.aspx" target="_blank">ICMIS</a></li>
+>>>>>>> Stashed changes
                         <li><a class="dropdown-item" href="https://fms.ppa.gov.et/m/SignIn" target="_blank">eFleet</a>
                         </li>
                         <li><a class="dropdown-item" href="https://www.eservices.gov.et/en" target="_blank">eService</a></li>
@@ -347,7 +310,7 @@ session_start();
                 </li>
                 </ul>
 
-                <form method="POST" action="./assets/function/subscription.php" class="d-flex">
+                <form method="POST" action="./assets/fn/subscription.php" class="d-flex">
                     <input class="form-control me-2" type="text" name="fmail" placeholder="Full Name" required />
                     <input class="form-control me-2" type="email" name="email" placeholder="email" aria-label="email"
                         required />
@@ -360,7 +323,7 @@ session_start();
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
+                    aria-label="Slide 1" aria-current="true"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
                     aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
@@ -374,11 +337,127 @@ session_start();
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6"
                     aria-label="Slide 7"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7"
-                    aria-label="Slide 7"></button>
+                    aria-label="Slide 8"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8"
+                    aria-label="Slide 9"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="9"
+                    aria-label="Slide 10"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="10"
+                    aria-label="Slide 11"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="11"
+                    aria-label="Slide 12"></button>
             </div>
             <div class="carousel-inner">
-                <!--  zero carousel -->
+                <!--  carousel 1-->
                 <div class="carousel-item active" data-bs-interval="30000">
+                    <div class="row">
+                        <div class="col-md-12 mb-6"
+                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
+                            <div class="container py-3 py-xl-4">
+                                <div class="row gy-4 gy-md-0">
+                                    <!-- <div class="col-md-4 d-md-flex align-items-md-center" style="height: 450px"> -->
+                                        <!-- <div> -->
+                                            <img class="rounded img-fluid alig-center fit-cover"
+<<<<<<< Updated upstream
+                                                src="./assets/img/banner/for portal.jpg">
+=======
+                                                src="./assets/img/banner/needcollector 2019.jpg">
+>>>>>>> Stashed changes
+                                            
+                                        <!-- </div> -->
+
+                                    <!-- </div> -->
+<<<<<<< Updated upstream
+=======
+                        
+>>>>>>> Stashed changes
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- carousel 2-->
+                <div class="carousel-item" data-bs-interval="30000">
+                    <div class="row">
+
+                        <div class="col-md-12 mb-6"
+                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
+<<<<<<< Updated upstream
+
+=======
+>>>>>>> Stashed changes
+                            <div class="container py-3 py-xl-4">
+                                <div class="row gy-4 gy-md-0">
+                                    <a href="https://www.eservices.gov.et/en">
+                                        <img class="rounded img-fluid alig-center fit-cover"
+                                                src="./assets/img/banner/eservice.jpg">  </a>                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- carousel 3-->
+                <div class="carousel-item" data-bs-interval="30000">
+                    <div class="row">
+
+                        <div class="col-md-12 mb-6"
+                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
+<<<<<<< Updated upstream
+
+                            <div class="container py-3 py-xl-4">
+                                <div class="row gy-4 gy-md-0">
+                                    <a href="">
+                                        <img class="rounded img-fluid alig-center fit-cover"
+                                                src="./assets/img/banner/icmis.jpg">  </a>                                  
+=======
+                            <div class="container py-3 py-xl-4">
+                                <div class="row gy-4 gy-md-0">
+                                    <a href="https://icsmiscscp.ecsc.gov.et/icsmiscsc/Portal/Login.aspx">
+                                        <img class="rounded img-fluid alig-center fit-cover"
+                                                src="./assets/img/banner/icmis.jpg">  </a>                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- carousel 4-->
+                <div class="carousel-item" data-bs-interval="30000">
+                    <div class="row">
+                        <div class="container py-4 py-xl-5">
+                            <div class="row gy-4 gy-md-0">
+                                <div class=" d-md-flex align-items-md-center" style="height: 450px">
+                                    <div class="card">
+                                        <a href="https://pms.moa.gov.et/login">
+                                            <img class="img-fluid"
+                                                src="./assets/img/banner/MoA planning and performance.jpg">
+                                        </a>
+                                    </div>
+>>>>>>> Stashed changes
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<<<<<<< Updated upstream
+                <!-- third carousel -->
+                <div class="carousel-item" data-bs-interval="30000">
+                    <div class="row">
+                        <div class="container py-4 py-xl-5">
+                            <div class="row gy-4 gy-md-0">
+                                <div class=" d-md-flex align-items-md-center" style="height: 450px">
+                                    <div class="card">
+                                        <a href="https://pms.moa.gov.et/login">
+                                            <img class="img-fluid"
+                                                src="./assets/img/banner/MoA planning and performance.jpg">
+                                        </a>
+=======
+                <!--  carousel 1-->
+                <div class="carousel-item" data-bs-interval="30000">
                     <div class="row">
                         <div class="col-md-12 mb-6"
                             style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
@@ -392,62 +471,94 @@ session_start();
                                         <!-- </div> -->
 
                                     <!-- </div> -->
+                        
                                     
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
 
-                <!-- First carousel -->
+                <!-- carousel 5-->
                 <div class="carousel-item" data-bs-interval="30000">
+                    <div class="row">
+                        <!-- message with image only -->
+                        <div class="col-md-12 mb-6"
+                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
+                            <div class="container py-4 py-xl-5">
+                                <div class="row gy-4 gy-md-0">
+                                    <!-- <div class="col-md-8 d-md-flex align-items-md-center"> -->
+                                        <div style="max-width: 100%;">
+                                            <div style="text-align:center;">
+                                                <h1 style="margin:10px">እንኳን ወደ እንስሳት ጤና ኢንስቲትዩት <br>የውስጥ መገናኛ ዘዴ በሰላም
+                                                    መጡ!</h1>
+                                            </div>
+                                            <h4 style="text-align:center; margin:5%">በዚህ መረጃ መስጫ ገጽ፡ ከመረጃ መለዋወጥ ባሻገር
+                                                የተለያዩ አገልግሎት መጠየቂያ
+                                                ፎርሞችን፡ የመንግስትን ዲጂታል አሰራር ለውጥ ተከትሎ በተቋማችን የተተገበሩትን ሲስተም ማስፈንጠሪያዎችና፡ ግልፅ
+                                                አሰራርን ለማስፈን የሚረዱ የተለያዩ መተዳደሪያ ደንቦችንና ህጎችን ከዲጂታል ላይብረሪ ማግኘት ይችላሉ፡፡</h4>
+                                            <h4 style="text-align:center;">ለበለጠ ንባብ በሚከተሉት ማህበራዊ ሚዲያ ይከታተሉን</h4>
+                                            <br>
+                                            <hr>
+                                        </div>
+                                    <!-- </div> -->
+                                    <div style="text-align:center;">
+                                        <a href="https://web.facebook.com/MoANAHDIC">
+                                            <i class="fab fa-facebook-f fa-2x" style="color: #3b5998;"></i>
+                                        </a> &nbsp;&nbsp;
+                                        <!-- Twitter -->
+                                        <a href="https://https://x.com/MoA_NAHDIC">
+                                            <i class="fab fa-twitter fa-2x" style="color: #55acee;"></i>&nbsp;&nbsp;
+                                        </a>
+
+                                        <!-- Google -->
+                                        <a href="https://www.youtube.com/@AnimalHealthInstitute">
+                                            <i class="fab fa-youtube fa-2x" style="color: #dd4b39;"></i>
+                                        </a>&nbsp;&nbsp;
+
+                                        <!-- Linkedin -->
+                                        <i class="fab fa-linkedin-in fa-2x" style="color: #0082ca;"></i>&nbsp;&nbsp;
+
+                                        <!-- telegram -->
+                                        <i class="fab fa-telegram fa-2x" style="color: #0082ca;"></i>
+>>>>>>> Stashed changes
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                 <!-- carousel 6-->
+                 <div class="carousel-item" data-bs-interval="30000">
                     <div class="row">
 
                         <div class="col-md-12 mb-6"
                             style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
-
                             <div class="container py-3 py-xl-4">
                                 <div class="row gy-4 gy-md-0">
-                                    <a href="https://www.eservices.gov.et/en">
+                                    <a href="https://fms.ppa.gov.et/m/SignIn">
                                         <img class="rounded img-fluid alig-center fit-cover"
-                                                src="./assets/img/banner/eservice.jpg">  </a>                                  
+                                                src="./assets/img/banner/e-fleet.jpg">  </a>                                  
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
+                
+                <!-- carousel 7-->
 
-                <!-- Second carousel -->
                 <div class="carousel-item" data-bs-interval="30000">
                     <div class="row">
-
-                        <div class="col-md-12 mb-6"
-                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
-
-                            <div class="container py-3 py-xl-4">
-                                <div class="row gy-4 gy-md-0">
-                                    <a href="">
-                                        <img class="rounded img-fluid alig-center fit-cover"
-                                                src="./assets/img/banner/icmis.jpg">  </a>                                  
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- third carousel -->
-                <div class="carousel-item" data-bs-interval="30000">
-                    <div class="row">
+<<<<<<< Updated upstream
+                        <!-- message with image only -->
+=======
                         <div class="container py-4 py-xl-5">
                             <div class="row gy-4 gy-md-0">
                                 <div class=" d-md-flex align-items-md-center" style="height: 450px">
                                     <div class="card">
-                                        <a href="https://pms.moa.gov.et/login">
-                                            <img class="img-fluid"
-                                                src="./assets/img/banner/MoA planning and performance.jpg">
+                                        <a href="https://moa-portal.et/reform/login.php">
+                                            <img class="img-fluid" src="./assets/img/banner/MoA reform2.jpg">
                                         </a>
                                     </div>
                                 </div>
@@ -456,14 +567,55 @@ session_start();
                     </div>
                 </div>
 
-                <!-- Forth carousel -->
+                <!-- carousel 8-->
                 <div class="carousel-item" data-bs-interval="30000">
                     <div class="row">
-                        <!-- message with image only -->
+
+                        <div class="col-md-12 mb-6"
+                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
+                            <div class="container py-3 py-xl-4">
+                                <div class="row gy-4 gy-md-0">
+                                    <a href="https://feaccears.gov.et/EARS">
+                                        <img class="rounded img-fluid alig-center fit-cover"
+                                                src="./assets/img/banner/asset registration.jpg">  </a>                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  carousel 1-->
+                <div class="carousel-item" data-bs-interval="30000">
+                    <div class="row">
+                        <div class="col-md-12 mb-6"
+                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
+                            <div class="container py-3 py-xl-4">
+                                <div class="row gy-4 gy-md-0">
+                                    <!-- <div class="col-md-4 d-md-flex align-items-md-center" style="height: 450px"> -->
+                                        <!-- <div> -->
+                                            <img class="rounded img-fluid alig-center fit-cover"
+                                                src="./assets/img/banner/for portal.jpg">
+                                            
+                                        <!-- </div> -->
+
+                                    <!-- </div> -->
+                        
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- carousel 9-->
+                <div class="carousel-item">
+                    <div class="row">
+>>>>>>> Stashed changes
                         <div class="col-md-12 mb-6"
                             style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
                             <div class="container py-4 py-xl-5">
                                 <div class="row gy-4 gy-md-0">
+<<<<<<< Updated upstream
                                     <!-- <div class="col-md-8 d-md-flex align-items-md-center"> -->
                                         <div style="max-width: 100%;">
                                             <div style="text-align:center;">
@@ -534,9 +686,17 @@ session_start();
                                                 Greening the Grounds: How tree planting makes AHI's compound
                                                 more
                                                 stimulating!
+=======
+                                    <div class="col-md-4 d-md-flex align-items-md-center">
+                                        <div style="max-width: 100%;">
+                                            <h2 class="text-uppercase fw-bold" style="margin-right: -40px;">
+                                            Research and Innovation Week <br>
+>>>>>>> Stashed changes
                                             </h2>
+                                            <h5>Theme: Advancing Animal  Health Through Research and Innovation</h5>
                                             <hr>
                                             <p class="align-justify" style="align-content: justify;">
+<<<<<<< Updated upstream
                                                 In the heart of Ethiopia, a few kilometer from the downtown,
                                                 Animal
                                                 Health Institute. is taking a significant step towards
@@ -552,15 +712,21 @@ session_start();
                                             </p>
                                             <br>
                                             <a class="btn btn-warning btn-lg" role="button" href="#">Read
+=======
+                                                Day 1: Review of the progress of research activities conducted in 2018 E.C. Thursday, June 04, 2026 [ግንቦት 27/2018ዓ.ም]
+                                            </p>
+                                            <br>
+                                            <a class="btn btn-warning btn-lg" role="button" href="./assets/img/banner/Day_1_Schedule.pdf" target="_blank">Read
+>>>>>>> Stashed changes
                                                 More</a>
                                             <a class="btn btn-outline-warning btn-lg" role="button"
-                                                href="./assets/uploads/Greening the GroundsNEWS.pdf">pdf</a>
+                                                href="./assets/img/banner/Day_2_Schedule.pdf" target="_blank">pdf</a>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 d-md-flex align-items-md-center" style="height: 450px">
+                                    <div class="col-md-8 d-md-flex align-items-md-center" style="height: 450px">
                                         <div>
                                             <img class="rounded img-fluid alig-center fit-cover"
-                                                src="./assets/img/pic03.JPG">
+                                                src="./assets/img/banner/day 1 schedules.jpg">
                                         </div>
                                     </div>
                                 </div>
@@ -569,6 +735,46 @@ session_start();
                         </div>
                     </div>
                 </div>
+<<<<<<< Updated upstream
+=======
+
+                <!-- carousel 10-->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-12 mb-6"
+                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
+                            <div class="container py-4 py-xl-5">
+                                <div class="row gy-4 gy-md-0">
+                                    <div class="col-md-4 d-md-flex align-items-md-center">
+                                        <div style="max-width: 100%;">
+                                            <h2 class="text-uppercase fw-bold" style="margin-right: -40px;">
+                                            Research and Innovation Week <br>
+                                            </h2>
+                                            <h5>Theme: Advancing Animal  Health Through Research and Innovation</h5>
+                                            <hr>
+                                            <p class="align-justify" style="align-content: justify;">
+                                                Day 2: Review of the progress of research activities conducted in 2018 E.C. Thursday, June 04, 2026 [ግንቦት 27/2018ዓ.ም]
+                                            </p>
+                                            <br>
+                                            <a class="btn btn-warning btn-lg" role="button" href="./assets/img/banner/Day_1_Schedule.pdf" target="_blank">Read
+                                                More</a>
+                                            <a class="btn btn-outline-warning btn-lg" role="button"
+                                                href="./assets/img/banner/Day_2_Schedule.pdf" target="_blank">pdf</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 d-md-flex align-items-md-center" style="height: 450px">
+                                        <div>
+                                            <img class="rounded img-fluid alig-center fit-cover"
+                                                src="./assets/img/banner/day 2 schedules.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+>>>>>>> Stashed changes
             </div>
             <!-- Previous and Next button -->
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
@@ -595,7 +801,7 @@ session_start();
                         </div> -->
                 <!-- ICT Modal body -->
                 <div class="modal-body">
-                    <form method="POST" action="./assets/function/ictmaintenance.php">
+                    <form method="POST" action="./assets/fn/ictmaintenance.php">
                         <div class="form-group row">
                             <div class="col-sm-8">
                                 <input name="fname" type="text" class="form-control" id="fname"
@@ -621,14 +827,16 @@ session_start();
                                     <option value="eGP suport">eGP suport</option>
                                     <option value="e-service suport">eservice suport</option>
                                     <option value="IFMIS suport">IFMIS suport</option>
+                                    <option value="ICMIS suport">ICMIS suport</option>
                                     <option value="SILABFA suport">SILAB system</option>
                                     <option value="Other Service">Other service</option>
                                 </select>
                             </div>
 
                             <div class="col-sm-6">
-                                <input name="serial" type="text" class="form-control" id="serial"
-                                    placeholder="Serial No.">
+                               
+                                <input name="phone" type="text" class="form-control" id="phone"
+                                    placeholder="phone No.">
                             </div>
                         </div><br>
 

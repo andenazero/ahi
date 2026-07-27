@@ -1,5 +1,39 @@
 <?php
 include('../../assets/fn/session.php');
+
+
+include("../../assets/fn/config.php");
+
+// --- 1. DYNAMIC DASHBOARD COUNTS ---
+
+// Computer Maintenance Count (Checks for desktop, laptop, maintenance, or computer)
+$query_comp = "SELECT COUNT(*) AS total FROM ictform WHERE LOWER(equipmenttype) IN ('desktop', 'laptop', 'maintenance', 'computer')";
+$result_comp = mysqli_query($link, $query_comp);
+$row_comp = mysqli_fetch_assoc($result_comp);
+$count_computer = $row_comp['total'] ?? 0;
+
+// Networking Count
+$query_net = "SELECT COUNT(*) AS total FROM ictform WHERE LOWER(equipmenttype) = 'networking'";
+$result_net = mysqli_query($link, $query_net);
+$row_net = mysqli_fetch_assoc($result_net);
+$count_networking = $row_net['total'] ?? 0;
+
+// System Support Count
+$query_sys = "SELECT COUNT(*) AS total FROM ictform WHERE LOWER(equipmenttype) IN ('mobile', 'system', 'software')";
+$result_sys = mysqli_query($link, $query_sys);
+$row_sys = mysqli_fetch_assoc($result_sys);
+$count_system = $row_sys['total'] ?? 0;
+
+// Other Requests Count
+$query_other = "SELECT COUNT(*) AS total FROM ictform WHERE LOWER(equipmenttype) NOT IN ('desktop', 'laptop', 'maintenance', 'computer', 'networking', 'mobile', 'system', 'software')";
+$result_other = mysqli_query($link, $query_other);
+$row_other = mysqli_fetch_assoc($result_other);
+$count_other = $row_other['total'] ?? 0;
+
+// --- 2. FETCH ALL REQUESTS FOR THE TABLE ---
+$query_table = "SELECT * FROM ictform ORDER BY id DESC";
+$result_table = mysqli_query($link, $query_table);
+
 // include('../../assets/chqits/chqitsict.php');
 $status = $_SESSION['login_user'];
 $name = $_SESSION['fullName'];
@@ -201,9 +235,9 @@ if ($status != "ict") {
                                 <div class="card-body">
                                     <div class="row g-0 align-items-center">
                                         <div class="col me-2">
-                                            <div class="text-uppercase text-primary fw-bold text-xs mb-1"><span>Computer
+                                            <div class="text-uppercase text-primary fw-bold text-xs mb-1"><span>PC
                                                     Mainenance</span></div>
-                                            <div class="text-dark fw-bold h5 mb-0"><span>156</span></div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span><?php echo $count_computer;?></span></div>
                                         </div>
                                         <div class="col-auto"><i class="fas fa-cart-arrow-down fa-2x text-gray-300"></i>
                                         </div>
@@ -219,7 +253,7 @@ if ($status != "ict") {
                                             <div class="text-uppercase text-success fw-bold text-xs mb-1">
                                                 <span>Networking</span>
                                             </div>
-                                            <div class="text-dark fw-bold h5 mb-0"><span>215</span></div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span><?php echo $count_networking;?></span></div>
                                         </div>
                                         <div class="col-auto"><i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
                                         </div>
@@ -236,7 +270,7 @@ if ($status != "ict") {
                                                     Support</span></div>
                                             <div class="row g-0 align-items-center">
                                                 <div class="col-auto">
-                                                    <div class="text-dark fw-bold h5 mb-0 me-3"><span>506</span></div>
+                                                    <div class="text-dark fw-bold h5 mb-0 me-3"><span><?php echo $count_system;?></span></div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="progress progress-sm">
@@ -261,7 +295,7 @@ if ($status != "ict") {
                                         <div class="col me-2">
                                             <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span>Other
                                                     Requests</span></div>
-                                            <div class="text-dark fw-bold h5 mb-0"><span>18</span></div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span><?php echo $count_other;?></span></div>
                                         </div>
                                         <div class="col-auto"><i class="fas fa-comments fa-2x text-gray-300"></i></div>
                                     </div>
@@ -283,7 +317,7 @@ if ($status != "ict") {
                                 </div>
                                 <div class="card-body">
                                     <?php
-                                    include("./../../assets/fn/config.php");
+                                    // include("./../../assets/fn/config.php");
                                     // SQL query to select data from database
                                     $sql = "SELECT * FROM ictform WHERE maintainedby='' ORDER BY requesteddate ASC";
                                     $res_data = mysqli_query($link, $sql);
@@ -343,9 +377,10 @@ if ($status != "ict") {
                                                             <a href="#?id=<?= $rows['id'] ?>">
                                                                 <i class="fas fa-list"></i></a>&nbsp;
 
-                                                            <a href="./../pages/#.php?id=<?= $rows['id']; ?>">
-                                                                <i class="fas fa-recycle text-danger"></i></a>
+                                                            <a href="./../../assets/fn/ictformdelet.php?id=<?= $rows['id']; ?>">
+                                                                <i class="fas fa-recycle text-danger" onclick="return confirm('Are you sure you want to delete this item?');"></i></a>
 
+                                                        
 
 
                                                         </td>
@@ -437,9 +472,10 @@ if ($status != "ict") {
                                                             <a
                                                                 href="./../../assets/fn/ictanswered.php?id=<?= $rows['id'] ?>">
                                                                 <i class="fas fa-check text-success"></i></a>
-                                                            <a
-                                                                href="./../../assets/fn/#?id=<?= $rows['id'] ?>">
-                                                                <i class="fas fa-pen text-danger"></i></a>
+                                                            
+
+                                                            <a href="./ictformedit.php?id=<?= $rows['id'] ?>">
+                                                                <i class="fas fa-pen text-danger"></i></a>&nbsp;
                                                         </td>
                                                     <?php } ?>
 
