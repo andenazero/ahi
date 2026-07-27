@@ -3,7 +3,7 @@ include('../../assets/fn/session.php');
 // include('../../assets/chqits/chqitsict.php');
 $status = $_SESSION['login_user'];
 $name = $_SESSION['fullName'];
-if ($status != "gs") {
+if ($status != "property") {
     header("location: ./../../assets/fn/logout.php");
 }
 ?>
@@ -179,7 +179,7 @@ if ($status != "gs") {
                 </nav>
                 <div class="container-fluid">
                     <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                        <h3 class="text-dark mb-0">General Service</h3>
+                        <h3 class="text-dark mb-0">Property Management</h3>
                         <?php if (isset($_SESSION['response'])) { ?>
                             <div class="alert alert-success alert-dismissible">
                                 <b class="text-center">
@@ -191,8 +191,8 @@ if ($status != "gs") {
                         unset($_SESSION['response']);
                         ?>
                         <!-- </div> -->
-                        <a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#"><i
-                                class="fas fa-download fa-sm text-white-50"></i>&nbsp;Generate Report</a>
+                        <a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="property.php"><i
+                                class="fas fa-download fa-sm text-white-50"></i>&nbsp;Back to</a>
                     </div>
 
                     <div class="row">
@@ -211,7 +211,7 @@ if ($status != "gs") {
                                     <?php
                                     include("../../assets/fn/config.php");
                                     // SQL query to select data from database
-                                    $sql = "SELECT * FROM card WHERE authorizedby='' ORDER BY rdate ASC";
+                                    $sql = "SELECT * FROM card WHERE authorizedby!='' && totalAllowed='0' ORDER BY rdate ASC";
                                     $res_data = mysqli_query($link, $sql);
                                     ?>
                                     <div class="table-responsive table mt-2" id="dataTable" role="grid"
@@ -221,36 +221,17 @@ if ($status != "gs") {
                                                 <tr>
                                                     <th width="5%">#</th>
                                                     <th width="10%">CR ID</th>
-                                                    <th width="20%">Req. By</th>
-                                                    <th width="15%">Last Month</th>
-                                                    <th width="15%">No Month</th>
+                                                    <th width="15%">Req. By</th>
                                                     <th width="10%">Allowed</th>
-                                                    <th width="15%">Approved</th>
+                                                    <th width="10%">Last Month</th>
+                                                    <th width="15%">Authorized by</th>
+                                                    <th width="10%">Approved by</th>
+                                                    
                                                     <th width="10%">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <?php
-                                                    // Define an array with names as keys and their groups as values
-                                        $namesGroups = [
-                                            "Demessa Negera" => "10",
-                                            "Tewodros Alemu" => "9",
-                                            "Bizunesh Alemu" => "9",
-                                            
-                                            // Add more names and groups as needed
-                                        ];
-
-                                        // Function to check the group of a given name
-                                        function getGroup($name, $array) {
-                                            if (isset($array[$name])) {
-                                                return $array[$name];
-                                            } else {
-                                                return "Amount is not assigned";
-                                            }
-                                        }
-
-                                        // Example usage
-                                        
                                                 $i = 0;
                                                 while ($rows = mysqli_fetch_array($res_data)) {
                                                     $i += 1;
@@ -267,26 +248,23 @@ if ($status != "gs") {
                                                         <td>
                                                             <?= $rows['FullName']; ?>
                                                         </td>
+                                                        
+                                                        <td>
+                                                            <?= $rows['allowed']; ?>
+                                                        </td>
                                                         <td>
                                                             <?= $rows['lastMonth']; ?>
                                                         </td>
                                                         <td>
-                                                            <?= $rows['totalMonth']; ?>
+                                                            <?= $rows['approvedby']; ?>
                                                         </td>
                                                         <td>
-                                                            <?php
-                                                            // $nameToCheck = $rows['FullName'];
-                                                            echo '<h5 style="color: red;">'. getGroup($rows['FullName'], $namesGroups); '</h1>'
-                                                            
-                                                            ?>
-                                                        </td>
-                                                        <td>
-                                                            <?= ($rows['allowed'])*($rows['totalMonth']); ?>
+                                                            <?= $rows['authorizedby']; ?>
                                                         </td>
                                                         <td>
 
 
-                                                            <a href="./../../assets/fn/cardauthorized?crid<?= $rows['crid']; ?>"
+                                                            <a href="./../../assets/fn/ifmisReg.php?crid<?= $rows['crid']; ?>"
                                                                 type="button" data-bs-toggle="modal"
                                                                 data-bs-target="#editmodal">
                                                                 <i class="fas fa-pen text-primary"></i></a>&nbsp;
@@ -319,7 +297,9 @@ if ($status != "gs") {
 
                     </div>
 
-                
+                 
+
+                    <!-- end of the second list  -->
 
 
                 </div>
@@ -399,7 +379,7 @@ if ($status != "gs") {
                                 aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form method="POST" action="./../../assets/fn/cardauthorized.php">
+                            <form method="POST" action="./../../assets/fn/ifmisReg.php">
 
                                 <div class="form-group row">
 
@@ -408,25 +388,12 @@ if ($status != "gs") {
                                             placeholder="Request id">
                                     </div>
                                     <div class="col-sm-6">
-                                        <input name="authorizeddate" type="date" class="form-control" id="authorizeddate"
-                                            placeholder="Date Assigned">
-                                    </div>
-                                     
-                                </div><br>
-                                <div class="form-group row">
-                                    <!-- <div class="col-sm-4">
-                                        <input name="totalMonth" type="text" class="form-control" id="totalMonth"
-                                            placeholder="Request id">
-                                    </div> -->
-                                    <div class="col-sm-8">
-                                        <input name="authorizedby" type="text" class="form-control" id="authorizedby"  
-                                        value="<?php echo $name; ?>" >
-                                    </div>
-                                    <div class="col-sm-4">
                                         <input name="totalAllowed" type="text" class="form-control" id="totalAllowed"
-                                            placeholder="Allowed Amount">
+                                            placeholder="IFMIS ID">
                                     </div>
+                                    
                                 </div><br>
+                                
                                 <div class="form-group row">
                                     
                                     
@@ -435,7 +402,7 @@ if ($status != "gs") {
                                 <div class="form-group row">
                                     
                                     <div class="col-sm-6">
-                                        <button type="submit" class="btn btn-success">Authorize Request</button>
+                                        <button type="submit" class="btn btn-success">Registrered</button>
                                     </div>
                                 </div><br>
 

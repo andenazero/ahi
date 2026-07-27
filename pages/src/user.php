@@ -208,9 +208,7 @@ if($status!="user")
                                     include("./../../assets/fn/config.php");
                                     // SQL query to select data from database
 
-                                    //use or change the sql statement for a view from ictform and store table
-                                    // request has similarity like rid, note, status ...
-                                    $sql = "SELECT * FROM ictform WHERE maintainedby='' ORDER BY requesteddate ASC";
+                                    $sql = "SELECT * FROM ictform WHERE requestedby='$name' ORDER BY requesteddate ASC";
                                     $res_data = mysqli_query($link, $sql);
                                     ?>
                                     <div class="table-responsive table mt-2" id="dataTable" role="grid"

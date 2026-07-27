@@ -1,5 +1,5 @@
 <?php
-   include('./assets/function/session.php');
+//    include('./../assets/fn/session.php');
 //    session_start();
 ?>
 <!DOCTYPE html>
@@ -9,9 +9,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>AHI ERP</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
-    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="./../assets/fonts/fontawesome-all.min.css">
 </head>
 
 <body id="page-top">
@@ -141,13 +141,13 @@
                                 <div class="card-header py-3">
                                     <h6 class="text-primary fw-bold m-0">Address</h6>
                                 </div>
-                                <div class="card-body"><img src="assets/img/facebook.png" width="39" height="39"></div>
+                                <div class="card-body"><img src="./../assets/img/facebook.png" width="39" height="39"></div>
                             </div>
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="text-primary fw-bold m-0">Social Media&nbsp;</h6>
                                 </div>
-                                <div class="card-body"><img src="assets/img/facebook.png" width="35" height="35" style="padding-right: 0px;margin-right: 9px;"><img src="assets/img/github.png" width="35" height="35" style="margin-right: 9px;"><img src="assets/img/youtube.png" width="35" height="35" style="margin-left: -1px;padding-right: 0px;margin-right: 7px;"><img src="assets/img/twitter.png" width="35" height="35" style="margin-right: 9px;padding-right: 0px;"><img src="assets/img/Linkein.png" width="35" height="35" style="margin-left: 0px;"></div>
+                                <div class="card-body"><img src="./../assets/img/facebook.png" width="35" height="35" style="padding-right: 0px;margin-right: 9px;"><img src="assets/img/github.png" width="35" height="35" style="margin-right: 9px;"><img src="assets/img/youtube.png" width="35" height="35" style="margin-left: -1px;padding-right: 0px;margin-right: 7px;"><img src="assets/img/twitter.png" width="35" height="35" style="margin-right: 9px;padding-right: 0px;"><img src="assets/img/Linkein.png" width="35" height="35" style="margin-left: 0px;"></div>
                             </div>
                         </div>
                         <div class="col-lg-8">

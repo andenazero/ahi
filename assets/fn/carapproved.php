@@ -5,10 +5,11 @@ session_start();
 
 $crid = $_POST['crid']; 
 $approvedby = $_POST['approvedby'];
+$lastMonth = $_POST['lastMonth'];
 $approveddate = $date = date('Y/m/d H:i:s');
 $totalAllowed = $_POST['totalAllowed'];
 
-$sql = "UPDATE card SET approvedby='$approvedby', approveddate='$approveddate' WHERE crid=$crid";
+$sql = "UPDATE card SET lastMonth='$lastMonth', approvedby='$approvedby', approveddate='$approveddate' WHERE crid=$crid";
 $result = mysqli_query($link, $sql);
 if($result){
    header('location: ./../../pages/src/property.php');

@@ -13,7 +13,7 @@ $param_lMonth = $_POST['lastMonth'];
             $stmt->bind_param('ssssss', $param_eid, $param_fullName, $param_rDate, $param_month, $param_ramount,$param_lMonth);
             $stmt->execute();
            
-            header('location: ../../index.php');
+            header('location: ./../../pages/src/user.php');
             $_SESSION['response']="Mobile card request submited successfully";
             $_SESSION['types']="success";
         }
