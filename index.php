@@ -281,11 +281,8 @@ session_start();
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="http://egp.mofed.gov.et/registration/login"
                                 target="_blank">eGP</a></li>
-<<<<<<< Updated upstream
                         <li><a class="dropdown-item" href="#" target="_blank">ICMIS</a></li>
-=======
                         <li><a class="dropdown-item" href="https://icsmiscscp.ecsc.gov.et/icsmiscsc/portal/Login.aspx" target="_blank">ICMIS</a></li>
->>>>>>> Stashed changes
                         <li><a class="dropdown-item" href="https://fms.ppa.gov.et/m/SignIn" target="_blank">eFleet</a>
                         </li>
                         <li><a class="dropdown-item" href="https://www.eservices.gov.et/en" target="_blank">eService</a></li>
@@ -317,6 +314,7 @@ session_start();
             </div>
         </div>
     </nav>
+
     <section class="p-3 text-center text-sm-start">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -349,43 +347,23 @@ session_start();
                 <!--  carousel 1-->
                 <div class="carousel-item active" data-bs-interval="30000">
                     <div class="row">
-                        <div class="col-md-12 mb-6"
-                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
-                            <div class="container py-3 py-xl-4">
+                            <!-- <div class="container py-3 py-xl-4"> -->
                                 <div class="row gy-4 gy-md-0">
-                                    <!-- <div class="col-md-4 d-md-flex align-items-md-center" style="height: 450px"> -->
-                                        <!-- <div> -->
+                                    <!-- <div class="col-md-4 d-md-flex align-items-md-center"> -->
+                                        <div>
                                             <img class="rounded img-fluid alig-center fit-cover"
-<<<<<<< Updated upstream
-                                                src="./assets/img/banner/for portal.jpg">
-=======
-                                                src="./assets/img/banner/needcollector 2019.jpg">
->>>>>>> Stashed changes
-                                            
-                                        <!-- </div> -->
-
-                                    <!-- </div> -->
-<<<<<<< Updated upstream
-=======
-                        
->>>>>>> Stashed changes
-                                    
+                                                src="./assets/img/banner/needcollector 2019.jpg"> 
+                                        </div>
                                 </div>
-                            </div>
-                        </div>
+                            <!-- </div> -->
                     </div>
                 </div>
 
                 <!-- carousel 2-->
                 <div class="carousel-item" data-bs-interval="30000">
                     <div class="row">
-
                         <div class="col-md-12 mb-6"
                             style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
                             <div class="container py-3 py-xl-4">
                                 <div class="row gy-4 gy-md-0">
                                     <a href="https://www.eservices.gov.et/en">
@@ -400,24 +378,14 @@ session_start();
                 <!-- carousel 3-->
                 <div class="carousel-item" data-bs-interval="30000">
                     <div class="row">
-
                         <div class="col-md-12 mb-6"
                             style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
-<<<<<<< Updated upstream
-
-                            <div class="container py-3 py-xl-4">
+                            <!-- <div class="container py-3 py-xl-4"> -->
                                 <div class="row gy-4 gy-md-0">
                                     <a href="">
                                         <img class="rounded img-fluid alig-center fit-cover"
-                                                src="./assets/img/banner/icmis.jpg">  </a>                                  
-=======
-                            <div class="container py-3 py-xl-4">
-                                <div class="row gy-4 gy-md-0">
-                                    <a href="https://icsmiscscp.ecsc.gov.et/icsmiscsc/Portal/Login.aspx">
-                                        <img class="rounded img-fluid alig-center fit-cover"
-                                                src="./assets/img/banner/icmis.jpg">  </a>                                  
-                                </div>
-                            </div>
+                                                src="./assets/img/banner/icmis.jpg">  
+                                    </a>
                         </div>
                     </div>
                 </div>
@@ -434,14 +402,12 @@ session_start();
                                                 src="./assets/img/banner/MoA planning and performance.jpg">
                                         </a>
                                     </div>
->>>>>>> Stashed changes
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-<<<<<<< Updated upstream
                 <!-- third carousel -->
                 <div class="carousel-item" data-bs-interval="30000">
                     <div class="row">
@@ -453,7 +419,6 @@ session_start();
                                             <img class="img-fluid"
                                                 src="./assets/img/banner/MoA planning and performance.jpg">
                                         </a>
-=======
                 <!--  carousel 1-->
                 <div class="carousel-item" data-bs-interval="30000">
                     <div class="row">
@@ -519,7 +484,6 @@ session_start();
 
                                         <!-- telegram -->
                                         <i class="fab fa-telegram fa-2x" style="color: #0082ca;"></i>
->>>>>>> Stashed changes
                                     </div>
                                 </div>
                             </div>
@@ -548,9 +512,7 @@ session_start();
 
                 <div class="carousel-item" data-bs-interval="30000">
                     <div class="row">
-<<<<<<< Updated upstream
                         <!-- message with image only -->
-=======
                         <div class="container py-4 py-xl-5">
                             <div class="row gy-4 gy-md-0">
                                 <div class=" d-md-flex align-items-md-center" style="height: 450px">
@@ -608,12 +570,10 @@ session_start();
                 <!-- carousel 9-->
                 <div class="carousel-item">
                     <div class="row">
->>>>>>> Stashed changes
                         <div class="col-md-12 mb-6"
                             style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
                             <div class="container py-4 py-xl-5">
                                 <div class="row gy-4 gy-md-0">
-<<<<<<< Updated upstream
                                     <!-- <div class="col-md-8 d-md-flex align-items-md-center"> -->
                                         <div style="max-width: 100%;">
                                             <div style="text-align:center;">
@@ -684,17 +644,15 @@ session_start();
                                                 Greening the Grounds: How tree planting makes AHI's compound
                                                 more
                                                 stimulating!
-=======
+
                                     <div class="col-md-4 d-md-flex align-items-md-center">
                                         <div style="max-width: 100%;">
                                             <h2 class="text-uppercase fw-bold" style="margin-right: -40px;">
                                             Research and Innovation Week <br>
->>>>>>> Stashed changes
                                             </h2>
                                             <h5>Theme: Advancing Animal  Health Through Research and Innovation</h5>
                                             <hr>
                                             <p class="align-justify" style="align-content: justify;">
-<<<<<<< Updated upstream
                                                 In the heart of Ethiopia, a few kilometer from the downtown,
                                                 Animal
                                                 Health Institute. is taking a significant step towards
@@ -710,12 +668,11 @@ session_start();
                                             </p>
                                             <br>
                                             <a class="btn btn-warning btn-lg" role="button" href="#">Read
-=======
+
                                                 Day 1: Review of the progress of research activities conducted in 2018 E.C. Thursday, June 04, 2026 [ግንቦት 27/2018ዓ.ም]
                                             </p>
                                             <br>
                                             <a class="btn btn-warning btn-lg" role="button" href="./assets/img/banner/Day_1_Schedule.pdf" target="_blank">Read
->>>>>>> Stashed changes
                                                 More</a>
                                             <a class="btn btn-outline-warning btn-lg" role="button"
                                                 href="./assets/img/banner/Day_2_Schedule.pdf" target="_blank">pdf</a>
@@ -733,8 +690,7 @@ session_start();
                         </div>
                     </div>
                 </div>
-<<<<<<< Updated upstream
-=======
+
 
                 <!-- carousel 10-->
                 <div class="carousel-item">
