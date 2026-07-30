@@ -1,7 +1,5 @@
 <?php
 include('../../assets/fn/session.php');
-
-
 include("../../assets/fn/config.php");
 
 // --- 1. DYNAMIC DASHBOARD COUNTS ---
@@ -524,8 +522,8 @@ if ($status != "ict") {
                                     </div>
 
                                     <div class="col-sm-6">
-                                        <input name="serial" type="text" class="form-control" id="serial"
-                                            placeholder="Serial No.">
+                                        <input name="phone" type="text" class="form-control" id="phone"
+                                            placeholder="Phone No.">
                                     </div>
                                 </div><br>
 
