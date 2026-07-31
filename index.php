@@ -126,6 +126,21 @@ session_start();
                                         </ul>
                                     </li>
 
+                                    <!-- ICT Policy  -->
+                                     <li class="dropdown-submenu">
+                                        <a id="navbarLevel2" class="dropdown-item dropdown-toggle" href="#"
+                                            role="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">ICT</a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarLevel2">
+
+                                            <li>
+                                                <a class="dropdown-item" href="./material/ICT/Ictpolicy.pdf"
+                                                    target="_blank">ICT Policy</a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </li>
+
                                     <!-- purchasing department forms -->
                                     <li class="dropdown-submenu">
                                         <a id="navbarLevel2" class="dropdown-item dropdown-toggle" href="#"
@@ -178,7 +193,6 @@ session_start();
                                             </li>
                                         </ul>
                                     </li>
-
 
                                     <!-- <li class="dropdown-submenu">
                                         <a id="navbarLevel3" class="dropdown-item dropdown-toggle" href="#"
@@ -314,7 +328,7 @@ session_start();
             </div>
         </div>
     </nav>
-    <section class="p-3 text-center text-sm-start">
+    <section class="p-1 text-center text-sm-start">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -347,12 +361,12 @@ session_start();
                 <div class="carousel-item active" data-bs-interval="30000">
                     <div class="row">
                         <div class="col-md-12 mb-6"
-                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
-                            <div class="container">
-                                <div class="row gy-4 gy-md-0">
-                                    <div class="col-md-4 d-md-flex align-items-md-center" style="height: 450px">
-                                        <div>
-                                            <img class="rounded img-fluid alig-center fit-cover"
+                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify;">
+                            <div class="container py-1">
+                                <div class="row gy-4 gy-md-0 justify-content-center align-items-center" >
+                                    <div class="col-md-8 d-md-flex text-center" style="height: fit-content">
+                                        <div >
+                                            <img class="rounded img-fluid" 
                                                 src="./assets/img/banner/needcollector 2019.jpg">
                                         </div>
                                     </div>            
@@ -365,14 +379,17 @@ session_start();
                 <!-- carousel 2-->
                 <div class="carousel-item" data-bs-interval="30000">
                     <div class="row">
-
                         <div class="col-md-12 mb-6"
-                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
-                            <div class="container py-3 py-xl-4">
-                                <div class="row gy-4 gy-md-0">
-                                    <a href="https://www.eservices.gov.et/en">
-                                        <img class="rounded img-fluid alig-center fit-cover"
-                                                src="./assets/img/banner/eservice.jpg">  </a>                                  
+                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify;">
+                            <div class="container py-1">
+                                <div class="row gy-4 gy-md-0 justify-content-center align-items-center">
+                                    <div class="col-md-10 d-md-flex text-center" style="height: 480px">
+                                        <div>
+                                        <a href="https://www.eservices.gov.et/en">
+                                            <img class="rounded img-fluid alig-center "
+                                                    src="./assets/img/banner/eservice.jpg">  </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -382,234 +399,244 @@ session_start();
                 <!-- carousel 3-->
                 <div class="carousel-item" data-bs-interval="30000">
                     <div class="row">
-
                         <div class="col-md-12 mb-6"
-                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
-                            <div class="container py-3 py-xl-4">
-                                <div class="row gy-4 gy-md-0">
-                                    <a href="https://icsmiscscp.ecsc.gov.et/icsmiscsc/Portal/Login.aspx">
-                                        <img class="rounded img-fluid alig-center fit-cover"
+                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify;">
+                            <div class="container py-1">
+                                <div class="row gy-4 gy-md-0 justify-content-center align-items-center">
+                                    <div class="col-md-10 d-md-flex text-center" style="height: 480px">
+                                        <div>
+                                        <a href="https://icsmiscscp.ecsc.gov.et/icsmiscsc/Portal/Login.aspx">
+                                                <img class="rounded img-fluid alig-center fit-cover"
                                                 src="./assets/img/banner/icmis.jpg">  </a>                                  
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
+                                                
                 <!-- carousel 4-->
                 <div class="carousel-item" data-bs-interval="30000">
                     <div class="row">
-                        <div class="container py-4 py-xl-5">
-                            <div class="row gy-4 gy-md-0">
-                                <div class=" d-md-flex align-items-md-center" style="height: 450px">
-                                    <div class="card">
-                                        <a href="https://pms.moa.gov.et/login">
-                                            <img class="img-fluid"
-                                                src="./assets/img/banner/MoA planning and performance.jpg">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--  carousel 1-->
-                <div class="carousel-item" data-bs-interval="30000">
-                    <div class="row">
                         <div class="col-md-12 mb-6"
-                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
-                            <div class="container py-3 py-xl-4">
-                                <div class="row gy-4 gy-md-0">
-                                    <!-- <div class="col-md-4 d-md-flex align-items-md-center" style="height: 450px"> -->
-                                        <!-- <div> -->
-                                            <img class="rounded img-fluid alig-center fit-cover"
-                                                src="./assets/img/banner/for portal.jpg">
-                                            
-                                        <!-- </div> -->
-
-                                    <!-- </div> -->
-                        
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- carousel 5-->
-                <div class="carousel-item" data-bs-interval="30000">
-                    <div class="row">
-                        <!-- message with image only -->
-                        <div class="col-md-12 mb-6"
-                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
-                            <div class="container py-4 py-xl-5">
-                                <div class="row gy-4 gy-md-0">
-                                    <!-- <div class="col-md-8 d-md-flex align-items-md-center"> -->
-                                        <div style="max-width: 100%;">
-                                            <div style="text-align:center;">
-                                                <h1 style="margin:10px">እንኳን ወደ እንስሳት ጤና ኢንስቲትዩት <br>የውስጥ መገናኛ ዘዴ በሰላም
-                                                    መጡ!</h1>
-                                            </div>
-                                            <h4 style="text-align:center; margin:5%">በዚህ መረጃ መስጫ ገጽ፡ ከመረጃ መለዋወጥ ባሻገር
-                                                የተለያዩ አገልግሎት መጠየቂያ
-                                                ፎርሞችን፡ የመንግስትን ዲጂታል አሰራር ለውጥ ተከትሎ በተቋማችን የተተገበሩትን ሲስተም ማስፈንጠሪያዎችና፡ ግልፅ
-                                                አሰራርን ለማስፈን የሚረዱ የተለያዩ መተዳደሪያ ደንቦችንና ህጎችን ከዲጂታል ላይብረሪ ማግኘት ይችላሉ፡፡</h4>
-                                            <h4 style="text-align:center;">ለበለጠ ንባብ በሚከተሉት ማህበራዊ ሚዲያ ይከታተሉን</h4>
-                                            <br>
-                                            <hr>
+                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify;">
+                            <div class="container py-1">
+                                <div class="row gy-4 gy-md-0 justify-content-center align-items-center">
+                                    <div class="col-md-10 d-md-flex text-center" style="height: 480px">
+                                        <div>
+                                            <a href="https://pms.moa.gov.et/login">
+                                                <img class="img-fluid"
+                                                    src="./assets/img/banner/MoA planning and performance.jpg">
+                                            </a>
                                         </div>
-                                    <!-- </div> -->
-                                    <div style="text-align:center;">
-                                        <a href="https://web.facebook.com/MoANAHDIC">
-                                            <i class="fab fa-facebook-f fa-2x" style="color: #3b5998;"></i>
-                                        </a> &nbsp;&nbsp;
-                                        <!-- Twitter -->
-                                        <a href="https://https://x.com/MoA_NAHDIC">
-                                            <i class="fab fa-twitter fa-2x" style="color: #55acee;"></i>&nbsp;&nbsp;
-                                        </a>
-
-                                        <!-- Google -->
-                                        <a href="https://www.youtube.com/@AnimalHealthInstitute">
-                                            <i class="fab fa-youtube fa-2x" style="color: #dd4b39;"></i>
-                                        </a>&nbsp;&nbsp;
-
-                                        <!-- Linkedin -->
-                                        <i class="fab fa-linkedin-in fa-2x" style="color: #0082ca;"></i>&nbsp;&nbsp;
-
-                                        <!-- telegram -->
-                                        <i class="fab fa-telegram fa-2x" style="color: #0082ca;"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                 <!-- carousel 6-->
-                 <div class="carousel-item" data-bs-interval="30000">
-                    <div class="row">
-
-                        <div class="col-md-12 mb-6"
-                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
-                            <div class="container py-3 py-xl-4">
-                                <div class="row gy-4 gy-md-0">
-                                    <a href="https://fms.ppa.gov.et/m/SignIn">
-                                        <img class="rounded img-fluid alig-center fit-cover"
-                                                src="./assets/img/banner/e-fleet.jpg">  </a>                                  
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- carousel 7-->
-
+                       
+                <!--  carousel 5-->
                 <div class="carousel-item" data-bs-interval="30000">
                     <div class="row">
-                        <div class="container py-4 py-xl-5">
-                            <div class="row gy-4 gy-md-0">
-                                <div class=" d-md-flex align-items-md-center" style="height: 450px">
-                                    <div class="card">
-                                        <a href="https://moa-portal.et/reform/login.php">
-                                            <img class="img-fluid" src="./assets/img/banner/MoA reform2.jpg">
-                                        </a>
+                        <div class="col-md-12 mb-6"
+                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify;">
+                            <div class="container py-1">
+                                <div class="row gy-4 gy-md-0 justify-content-center align-items-center">
+                                    <div class="col-md-10 d-md-flex text-center" style="height: 480px">
+                                        <div>
+                                        <img class="rounded img-fluid alig-center fit-cover"
+                                                src="./assets/img/banner/for portal.jpg">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                
+                <!-- carousel 6-->
+                <div class="carousel-item" data-bs-interval="30000">
+                    <div class="row">
+                        <div class="col-md-12 mb-6"
+                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure">
+                            <div class="container py-1">
+                                <div class="row gy-4 gy-md-0 justify-content-center align-items-center">
+                                    <div class="col-md-10 d-md-flex text-center" style="height: 480px">    
+                                        <div>
+                                            <div style="max-width: 100%;">
+                                                <div style="text-align:center;">
+                                                    <h1 style="margin:10px">እንኳን ወደ እንስሳት ጤና ኢንስቲትዩት <br>የውስጥ መገናኛ ዘዴ በሰላም
+                                                        መጡ!</h1>
+                                                </div>
+                                                <h4 style="text-align:center; margin:5%">በዚህ መረጃ መስጫ ገጽ፡ ከመረጃ መለዋወጥ ባሻገር
+                                                    የተለያዩ አገልግሎት መጠየቂያ
+                                                    ፎርሞችን፡ የመንግስትን ዲጂታል አሰራር ለውጥ ተከትሎ በተቋማችን የተተገበሩትን ሲስተም ማስፈንጠሪያዎችና፡ ግልፅ
+                                                    አሰራርን ለማስፈን የሚረዱ የተለያዩ መተዳደሪያ ደንቦችንና ህጎችን ከዲጂታል ላይብረሪ ማግኘት ይችላሉ፡፡</h4>
+                                                <h4 style="text-align:center;">ለበለጠ ንባብ በሚከተሉት ማህበራዊ ሚዲያ ይከታተሉን</h4>
+                                                <br>
+                                                <hr>
+                                            </div>
+                                        
+                                            <div style="text-align:center;">
+                                                <a href="https://web.facebook.com/MoANAHDIC">
+                                                    <i class="fab fa-facebook-f fa-2x" style="color: #3b5998;"></i>
+                                                </a> &nbsp;&nbsp;
+                                                <!-- Twitter -->
+                                                <a href="https://https://x.com/MoA_NAHDIC">
+                                                    <i class="fab fa-twitter fa-2x" style="color: #55acee;"></i>&nbsp;&nbsp;
+                                                </a>
 
+                                                <!-- Google -->
+                                                <a href="https://www.youtube.com/@AnimalHealthInstitute">
+                                                    <i class="fab fa-youtube fa-2x" style="color: #dd4b39;"></i>
+                                                </a>&nbsp;&nbsp;
+
+                                                <!-- Linkedin -->
+                                                <i class="fab fa-linkedin-in fa-2x" style="color: #0082ca;"></i>&nbsp;&nbsp;
+
+                                                <!-- telegram -->
+                                                <i class="fab fa-telegram fa-2x" style="color: #0082ca;"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                 <!-- carousel 7-->
+                <div class="carousel-item" data-bs-interval="30000">
+                    <div class="row">
+                        <div class="col-md-12 mb-6"
+                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify;">
+                                <div class="container py-1">
+                                    <div class="row gy-4 gy-md-0 justify-content-center align-items-center">
+                                        <div class="col-md-10 d-md-flex text-center" style="height: 480px">
+                                            <div>
+                                                <a href="https://fms.ppa.gov.et/m/SignIn">
+                                                    <img class="rounded img-fluid alig-center fit-cover"
+                                                    src="./assets/img/banner/e-fleet.jpg">  </a>                                  
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                
                 <!-- carousel 8-->
                 <div class="carousel-item" data-bs-interval="30000">
                     <div class="row">
-
                         <div class="col-md-12 mb-6"
-                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
-                            <div class="container py-3 py-xl-4">
-                                <div class="row gy-4 gy-md-0">
-                                    <a href="https://feaccears.gov.et/EARS">
-                                        <img class="rounded img-fluid alig-center fit-cover"
-                                                src="./assets/img/banner/asset registration.jpg">  </a>                                  
+                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify;">
+                            <div class="container py-1">
+                                <div class="row gy-4 gy-md-0 justify-content-center align-items-center">
+                                    <div class="col-md-10 d-md-flex text-center" style="height: 480px">
+                                        <div>
+                                            <a href="https://moa-portal.et/reform/login.php">
+                                                <img class="img-fluid" src="./assets/img/banner/MoA reform2.jpg">
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!--  carousel 9-->
+                <!-- carousel 9-->
                 <div class="carousel-item" data-bs-interval="30000">
                     <div class="row">
                         <div class="col-md-12 mb-6"
-                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
-                            <div class="container py-3 py-xl-4">
-                                <div class="row gy-4 gy-md-0">
-                                    <!-- <div class="col-md-4 d-md-flex align-items-md-center" style="height: 450px"> -->
-                                        <!-- <div> -->
-                                            <img class="rounded img-fluid alig-center fit-cover"
-                                                src="./assets/img/banner/for portal.jpg">
-                                            
-                                        <!-- </div> -->
-
-                                    <!-- </div> -->
-                        
-                                    
+                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify;">
+                            <div class="container py-1">
+                                <div class="row gy-4 gy-md-0 justify-content-center align-items-center">
+                                    <div class="col-md-10 d-md-flex text-center" style="height: 480px">
+                                        <div>
+                                            <a href="https://feaccears.gov.et/EARS">
+                                                <img class="rounded img-fluid alig-center fit-cover"
+                                                src="./assets/img/banner/asset registration.jpg">  </a>                                  
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- carousel 10-->
-                <div class="carousel-item">
+                <!--  carousel 10-->
+                <div class="carousel-item" data-bs-interval="30000">
                     <div class="row">
                         <div class="col-md-12 mb-6"
-                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
-                            <div class="container py-4 py-xl-5">
-                                <div class="row gy-4 gy-md-0">
-                                    <div class="col-md-4 d-md-flex align-items-md-center">
-                                        <div style="max-width: 100%;">
-                                            <h2 class="text-uppercase fw-bold" style="margin-right: -40px;">
-                                            Research and Innovation Week <br>
-                                            </h2>
-                                            <h5>Theme: Advancing Animal  Health Through Research and Innovation</h5>
-                                            <hr>
-                                            <p class="align-justify" style="align-content: justify;">
-                                                Day 1: Review of the progress of research activities conducted in 2018 E.C. Thursday, June 04, 2026 [ግንቦት 27/2018ዓ.ም]
-                                            </p>
-                                            <br>
-                                            <a class="btn btn-warning btn-lg" role="button" href="./assets/img/banner/Day_1_Schedule.pdf" target="_blank">Read
-                                                More</a>
-                                            <a class="btn btn-outline-warning btn-lg" role="button"
-                                                href="./assets/img/banner/Day_2_Schedule.pdf" target="_blank">pdf</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8 d-md-flex align-items-md-center" style="height: 450px">
+                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify;">
+                            <div class="container py-1">
+                                <div class="row gy-4 gy-md-0 justify-content-center align-items-center">
+                                    <div class="col-md-10 d-md-flex text-center" style="height: 480px">
                                         <div>
                                             <img class="rounded img-fluid alig-center fit-cover"
-                                                src="./assets/img/banner/day 1 schedules.jpg">
+                                                src="./assets/img/banner/for portal.jpg">
                                         </div>
-                                    </div>
+                                    </div>    
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
 
                 <!-- carousel 11-->
-                <div class="carousel-item">
+                <div class="carousel-item" data-bs-interval="30000">
                     <div class="row">
-                        <div class="col-md-12 mb-6"
-                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure;">
-                            <div class="container py-4 py-xl-5">
-                                <div class="row gy-4 gy-md-0">
-                                    <div class="col-md-4 d-md-flex align-items-md-center">
-                                        <div style="max-width: 100%;">
-                                            <h2 class="text-uppercase fw-bold" style="margin-right: -40px;">
+                        <div class="col-md-12 mb-4"
+                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure">
+                            <div class="container py-1">
+                                <div class="row gy-4 gy-md-0 justify-content-center align-items-center">
+                                    <div class="col-md-10 d-md-flex text-center" style="height: 480px">    
+                                        <!-- <div> -->
+                                            <div style="max-width: 100%; margin-top: 50px">
+                                                <h3 class="text-uppercase fw-bold" >
+                                                Research and Innovation Week <br>
+                                                </h3>
+                                                <h5>Theme: Advancing Animal  Health Through Research and Innovation</h5>
+                                                <hr>
+                                                <p class="align-justify" style="align-content: justify;">
+                                                    Day 1: Review of the progress of research activities conducted in 2018 E.C. Thursday, June 04, 2026 [ግንቦት 27/2018ዓ.ም]
+                                                </p>
+                                                <br>
+                                                <a class="btn btn-warning btn-lg" role="button" href="./assets/img/banner/Day_1_Schedule.pdf" target="_blank">Read
+                                                    More</a>
+                                                <a class="btn btn-outline-warning btn-lg" role="button"
+                                                    href="./assets/img/banner/Day_2_Schedule.pdf" target="_blank">pdf</a>
+                                            </div>
+                                            <!-- </div> -->
+                                            <div class="col-md-7 d-md-flex align-items-md-center" style="height: 450px">
+                                                <div>
+                                                    <img class="rounded img-fluid alig-center fit-cover"
+                                                        src="./assets/img/banner/day 1 schedules.jpg">
+                                                </div>
+                                            </div>
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                       
+                                                                
+                <!-- carousel 12-->
+                <div class="carousel-item" data-bs-interval="30000">
+                    <div class="row">
+                        <div class="col-md-12 mb-4"
+                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure">
+                            <div class="container py-1">
+                                <div class="row gy-4 gy-md-0 justify-content-center align-items-center">
+                                    <div class="col-md-10 d-md-flex text-center" style="height: 480px"> 
+                                        <div style="max-width: 100%; margin-top:50px;">
+                                            <h3 class="text-uppercase fw-bold">
                                             Research and Innovation Week <br>
-                                            </h2>
+                                            </h3>
                                             <h5>Theme: Advancing Animal  Health Through Research and Innovation</h5>
                                             <hr>
                                             <p class="align-justify" style="align-content: justify;">
@@ -621,20 +648,19 @@ session_start();
                                             <a class="btn btn-outline-warning btn-lg" role="button"
                                                 href="./assets/img/banner/Day_2_Schedule.pdf" target="_blank">pdf</a>
                                         </div>
-                                    </div>
-                                    <div class="col-md-8 d-md-flex align-items-md-center" style="height: 450px">
-                                        <div>
-                                            <img class="rounded img-fluid alig-center fit-cover"
-                                                src="./assets/img/banner/day 2 schedules.jpg">
+                                        <div class="col-md-7 d-md-flex align-items-md-center" style="height: 450px">
+                                            <div>
+                                                <img class="rounded img-fluid alig-center fit-cover"
+                                                    src="./assets/img/banner/day 2 schedules.jpg">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-                </div>
-            </div>
+                </div>             
+            </div>      
             <!-- Previous and Next button -->
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
                 data-bs-slide="prev">
