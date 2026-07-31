@@ -296,7 +296,7 @@ $name = $_SESSION['login_user'];
 
                         <!-- Modal body -->
                         <div class="modal-body">
-                            <form method="POST" action="./assets/function/ictmaintenance.php">
+                            <form method="POST" action="./assets/fn/ictmaintenance.php">
                                 <div class="form-group row">
                                     <div class="col-sm-8">
                                         <input name="fname" type="text" class="form-control" id="fname" placeholder="Requested by">

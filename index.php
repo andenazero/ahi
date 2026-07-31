@@ -364,7 +364,7 @@ session_start();
                             style="background-color: rgba(52, 94, 140, 0.7); align-content: justify;">
                             <div class="container py-1">
                                 <div class="row gy-4 gy-md-0 justify-content-center align-items-center" >
-                                    <div class="col-md-8 d-md-flex text-center" style="height: fit-content">
+                                    <div class="col-md-8 d-md-flex text-center" style="height: 475px">
                                         <div >
                                             <img class="rounded img-fluid" 
                                                 src="./assets/img/banner/needcollector 2019.jpg">
@@ -381,9 +381,9 @@ session_start();
                     <div class="row">
                         <div class="col-md-12 mb-6"
                             style="background-color: rgba(52, 94, 140, 0.7); align-content: justify;">
-                            <div class="container py-1">
+                            <div class="container py-2">
                                 <div class="row gy-4 gy-md-0 justify-content-center align-items-center">
-                                    <div class="col-md-10 d-md-flex text-center" style="height: 480px">
+                                    <div class="col-md-10 d-md-flex text-center" style="height: 470px">
                                         <div>
                                         <a href="https://www.eservices.gov.et/en">
                                             <img class="rounded img-fluid alig-center "
@@ -401,9 +401,9 @@ session_start();
                     <div class="row">
                         <div class="col-md-12 mb-6"
                             style="background-color: rgba(52, 94, 140, 0.7); align-content: justify;">
-                            <div class="container py-1">
+                            <div class="container py-2">
                                 <div class="row gy-4 gy-md-0 justify-content-center align-items-center">
-                                    <div class="col-md-10 d-md-flex text-center" style="height: 480px">
+                                    <div class="col-md-10 d-md-flex text-center" style="height: 470px">
                                         <div>
                                         <a href="https://icsmiscscp.ecsc.gov.et/icsmiscsc/Portal/Login.aspx">
                                                 <img class="rounded img-fluid alig-center fit-cover"
@@ -421,9 +421,9 @@ session_start();
                     <div class="row">
                         <div class="col-md-12 mb-6"
                             style="background-color: rgba(52, 94, 140, 0.7); align-content: justify;">
-                            <div class="container py-1">
+                            <div class="container py-2">
                                 <div class="row gy-4 gy-md-0 justify-content-center align-items-center">
-                                    <div class="col-md-10 d-md-flex text-center" style="height: 480px">
+                                    <div class="col-md-10 d-md-flex text-center" style="height: 470px">
                                         <div>
                                             <a href="https://pms.moa.gov.et/login">
                                                 <img class="img-fluid"
@@ -442,9 +442,9 @@ session_start();
                     <div class="row">
                         <div class="col-md-12 mb-6"
                             style="background-color: rgba(52, 94, 140, 0.7); align-content: justify;">
-                            <div class="container py-1">
+                            <div class="container py-2">
                                 <div class="row gy-4 gy-md-0 justify-content-center align-items-center">
-                                    <div class="col-md-10 d-md-flex text-center" style="height: 480px">
+                                    <div class="col-md-10 d-md-flex text-center" style="height: 470px">
                                         <div>
                                         <img class="rounded img-fluid alig-center fit-cover"
                                                 src="./assets/img/banner/for portal.jpg">
@@ -461,9 +461,9 @@ session_start();
                     <div class="row">
                         <div class="col-md-12 mb-6"
                             style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure">
-                            <div class="container py-1">
+                            <div class="container py-2">
                                 <div class="row gy-4 gy-md-0 justify-content-center align-items-center">
-                                    <div class="col-md-10 d-md-flex text-center" style="height: 480px">    
+                                    <div class="col-md-10 d-md-flex text-center" style="height: 470px">    
                                         <div>
                                             <div style="max-width: 100%;">
                                                 <div style="text-align:center;">
@@ -512,9 +512,9 @@ session_start();
                     <div class="row">
                         <div class="col-md-12 mb-6"
                             style="background-color: rgba(52, 94, 140, 0.7); align-content: justify;">
-                                <div class="container py-1">
+                                <div class="container py-2">
                                     <div class="row gy-4 gy-md-0 justify-content-center align-items-center">
-                                        <div class="col-md-10 d-md-flex text-center" style="height: 480px">
+                                        <div class="col-md-10 d-md-flex text-center" style="height: 470px">
                                             <div>
                                                 <a href="https://fms.ppa.gov.et/m/SignIn">
                                                     <img class="rounded img-fluid alig-center fit-cover"
@@ -532,9 +532,9 @@ session_start();
                     <div class="row">
                         <div class="col-md-12 mb-6"
                             style="background-color: rgba(52, 94, 140, 0.7); align-content: justify;">
-                            <div class="container py-1">
+                            <div class="container py-2">
                                 <div class="row gy-4 gy-md-0 justify-content-center align-items-center">
-                                    <div class="col-md-10 d-md-flex text-center" style="height: 480px">
+                                    <div class="col-md-10 d-md-flex text-center" style="height: 470px">
                                         <div>
                                             <a href="https://moa-portal.et/reform/login.php">
                                                 <img class="img-fluid" src="./assets/img/banner/MoA reform2.jpg">
@@ -552,9 +552,9 @@ session_start();
                     <div class="row">
                         <div class="col-md-12 mb-6"
                             style="background-color: rgba(52, 94, 140, 0.7); align-content: justify;">
-                            <div class="container py-1">
+                            <div class="container py-2">
                                 <div class="row gy-4 gy-md-0 justify-content-center align-items-center">
-                                    <div class="col-md-10 d-md-flex text-center" style="height: 480px">
+                                    <div class="col-md-10 d-md-flex text-center" style="height: 470px">
                                         <div>
                                             <a href="https://feaccears.gov.et/EARS">
                                                 <img class="rounded img-fluid alig-center fit-cover"
@@ -572,9 +572,9 @@ session_start();
                     <div class="row">
                         <div class="col-md-12 mb-6"
                             style="background-color: rgba(52, 94, 140, 0.7); align-content: justify;">
-                            <div class="container py-1">
+                            <div class="container py-2">
                                 <div class="row gy-4 gy-md-0 justify-content-center align-items-center">
-                                    <div class="col-md-10 d-md-flex text-center" style="height: 480px">
+                                    <div class="col-md-10 d-md-flex text-center" style="height: 470px">
                                         <div>
                                             <img class="rounded img-fluid alig-center fit-cover"
                                                 src="./assets/img/banner/for portal.jpg">
@@ -593,7 +593,7 @@ session_start();
                             style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure">
                             <div class="container py-1">
                                 <div class="row gy-4 gy-md-0 justify-content-center align-items-center">
-                                    <div class="col-md-10 d-md-flex text-center" style="height: 480px">    
+                                    <div class="col-md-10 d-md-flex text-center" style="height: 460px">    
                                         <!-- <div> -->
                                             <div style="max-width: 100%; margin-top: 50px">
                                                 <h3 class="text-uppercase fw-bold" >
@@ -632,7 +632,7 @@ session_start();
                             style="background-color: rgba(52, 94, 140, 0.7); align-content: justify; color:azure">
                             <div class="container py-1">
                                 <div class="row gy-4 gy-md-0 justify-content-center align-items-center">
-                                    <div class="col-md-10 d-md-flex text-center" style="height: 480px"> 
+                                    <div class="col-md-10 d-md-flex text-center" style="height: 460px"> 
                                         <div style="max-width: 100%; margin-top:50px;">
                                             <h3 class="text-uppercase fw-bold">
                                             Research and Innovation Week <br>
