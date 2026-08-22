@@ -21,7 +21,7 @@ session_start();
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <!--make this NAV a fixed overlay-->
         <div class="container-fluid">
-            <a class="navbar-brand" href="./pages/src/control.php" target="_blank">
+            <a class="navbar-brand" href="./index.php" target="_blank">
                 <img src="./assets/img/logo/final 5.png" width="30" height="30" class="d-inline-block align-text-top">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -35,183 +35,11 @@ session_start();
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">AHI-Portal
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarLevel1">
-                            <li>
-                                <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#myModal">ICT
-                                    Maintenance</a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#cardModal">Mobile
-                                    Card Request</a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#reform">Customer
-                                    Satisfaction</a>
-                            </li>
-
-                            <li class="dropdown-submenu">
-                                <a id="navbarLevel2" class="dropdown-item dropdown-toggle" href="#" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MoA e-Service</a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarLevel2">
-                                    <li>
-                                        <a class="dropdown-item" href="https://moa-portal.et/reform/login.php"
-                                            target="_blank">Institutional Reform
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="http://silabfa.et:9001/silabfa"
-                                    target="_blank">SILABFA</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- END -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Digital Library
                         </a>
                         <ul class="dropdown-menu">
 
-                            <!-- Different forms-->
-                            <li class="dropdown-submenu">
-                                <a id="navbarLevel2" class="dropdown-item dropdown-toggle" href="#" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Forms</a>
-
-                                <ul class="dropdown-menu" aria-labelledby="navbarLevel2">
-
-                                    <!-- Finance department forms -->
-                                    <li class="dropdown-submenu">
-                                        <a id="navbarLevel2" class="dropdown-item dropdown-toggle" href="#"
-                                            role="button" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">Finance</a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarLevel2">
-
-                                            <li>
-                                                <a class="dropdown-item" href="./material/Finance/አበል የቡድንመሪ(ዴስክ).pdf"
-                                                    target="_blank">አበል የቡድንመሪ(ዴስክ)
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item"
-                                                    href="./material/Finance/አበል የቡድን መሪ(ዴስክ) የሌለው.pdf"
-                                                    target="_blank">አበል የቡድንመሪ(ዴስክ) የሌለው
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item"
-                                                    href="./material/Finance/የመኪና እጥበትና የቅባቶች ማዘዣ.pdf"
-                                                    target="_blank">የመኪና እጥበትና ቅባቶች ማዘዣ
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item"
-                                                    href="./material/Finance/የዕቃና የአገልግሎት ወጪ ቅድሚያ መክፈያ ቅጽ ግዢ.pdf"
-                                                    target="_blank">የዕቃና የአገልግሎት ወጪ
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item"
-                                                    href="./material/Finance/በመስክ ላይ ለሚፈፀም ክፍያ የሚሞላ ቅጽ.pdf"
-                                                    target="_blank">በመስክ ላይ ለሚፈፀም ክፍያ
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <!-- ICT Policy  -->
-                                    <li class="dropdown-submenu">
-                                        <a id="navbarLevel2" class="dropdown-item dropdown-toggle" href="#"
-                                            role="button" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">ICT</a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarLevel2">
-
-                                            <li>
-                                                <a class="dropdown-item" href="./material/ICT/Ictpolicy.pdf"
-                                                    target="_blank">ICT Policy</a>
-                                            </li>
-
-                                        </ul>
-                                    </li>
-
-                                    <!-- purchasing department forms -->
-                                    <li class="dropdown-submenu">
-                                        <a id="navbarLevel2" class="dropdown-item dropdown-toggle" href="#"
-                                            role="button" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">Purchase</a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarLevel2">
-
-                                            <li>
-                                                <a class="dropdown-item" href="./material/Purchase/form6.pdf"
-                                                    target="_blank">የዕቃ ግዥ መጠየቂያ
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="./material/Purchase/form5.pdf"
-                                                    target="_blank">የዕቃ ወጪ መጠየቂያ
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="./material/Purchase/form7.pdf"
-                                                    target="_blank">የነዳጅ ማሰራጯ
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="./material/Purchase/form4.pdf"
-                                                    target="_blank">የበር መውጫ
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="./material/Purchase/form1.pdf"
-                                                    target="_blank">wage form
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="dropdown-submenu">
-                                        <a id="navbarLevel2" class="dropdown-item dropdown-toggle" href="#"
-                                            role="button" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">Reform</a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarLevel2">
-
-                                            <li>
-                                                <a class="dropdown-item" href="./material/reform/የቅሬጻ ማቅረቢያ ቅፃቅፆች.pdf"
-                                                    target="_blank">Complain
-                                                    form</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="./material/Transport Request Form.pdf"
-                                                    target="_blank">Transport request</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <!-- <li class="dropdown-submenu">
-                                        <a id="navbarLevel3" class="dropdown-item dropdown-toggle" href="#"
-                                            role="button" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">Parent3
-                                            Chield4</a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarLevel3">
-                                            <li>
-                                                <a class="dropdown-item" href="#">Parent3 Chield4 Grandchild1</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">Parent3 Chield4 Grandchild2</a>
-                                            </li>
-                                        </ul> -->
-                                </ul>
-                            <li>
-                                <div class="dropdown-divider"></div>
-                            </li>
                     </li>
                     <!-- Documents to read-->
 
@@ -241,12 +69,11 @@ session_start();
                         <ul class="dropdown-menu" aria-labelledby="navbarLevel2">
 
                             <li>
-                                <a class="dropdown-item"
-                                    href="./material/ICT/AHI ICT policy V1.0.pdf"
+                                <a class="dropdown-item" href="./material/ICT/AHI ICT policy V1.0.pdf"
                                     target="_blank">ICT Policy
                                 </a>
                             </li>
-    
+
                         </ul>
                     </li>
 
@@ -344,6 +171,11 @@ session_start();
                         required />
                     <button class="btn btn-outline-danger" type="submit">Subscribe</button>
                 </form>
+
+                <a class="navbar-brand" href="./pages/src/control.php" target="_blank">
+                    <img src="./assets/img/logo/user.png" width="30" height="30"
+                        class="d-inline-block align-text-top">
+                </a>
             </div>
         </div>
     </nav>

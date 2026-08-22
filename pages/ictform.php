@@ -202,7 +202,7 @@ $name = $_SESSION['login_user'];
                                     ?>
                                 <!-- Update form -->
                                 <div style="margin: 15px;">
-                                    <form method="POST" action="./../assets/function/ictasignment.php">
+                                    <form method="POST" action="./../assets/fn/ictasignment.php">
                                         <div class="form-group row">
                                             <label for="rid" class="col-sm-3 col-form-label">Request ID</label>
                                             <div class="col-sm-9">
