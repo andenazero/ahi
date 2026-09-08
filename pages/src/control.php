@@ -65,8 +65,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $error = "Your Login Name or Password is invalid";
     }
-
 }
+$message = '';
+$message_type = '';
 ?>
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="en">
@@ -92,9 +93,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <div class="col-lg-5">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h4 class="text-dark mb-4">Welcome to AHI's <br>Authentication section.</h4>
+   
+                                        <h5 class="text-dark mb-4">Welcome to AHI's Portal.</h5>
                                         <hr>
-                                    </div> 
+                                    </div>
                                     <form class="user" action="" method="post">
                                         <div class="mb-3"><input class="form-control form-control-user" type="text"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
@@ -130,15 +132,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                         id="formCheck-1"><label class="form-check-label"
                                                         for="formCheck-1">Remember Me</label></div>
                                             </div>
-                                        </div><button class="btn btn-primary d-block btn-user w-100"
-                                            type="submit">Login</button>
+                                        </div><button class="btn btn-primary d-block btn-user w-100" type="submit">Sign
+                                            IN</button>
                                         <!-- <hr><a class="btn btn-primary d-block btn-google btn-user w-100 mb-2" role="button"><i class="fab fa-google"></i>&nbsp; Login with Google</a><a class="btn btn-primary d-block btn-facebook btn-user w-100" role="button"><i class="fab fa-facebook-f"></i>&nbsp; Login with Facebook</a>
                                         <hr> -->
                                     </form>
-                                    <div class="text-center"><a class="small" href="forgot-password.html">Forgot
-                                            Password?</a></div>
-                                    <div class="text-center"><a class="small" href="register.php">Create an
-                                            Account!</a></div>
+                                    <div>
+                                        <hr>
+                                    </div>
+                                    <div>
+                                        <a class="small text-left" href="forgot-password.html">Forgot
+                                            Password?</a>
+                                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                        <a class="small" href="register.php"> Sign up </a>
+                                    </div>
                                 </div>
                             </div>
                             <!-- <div style="margin:20px;"> -->

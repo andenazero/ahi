@@ -301,7 +301,6 @@ session_start();
                             </li>
                         </ul>
                     </li>
-
                 </ul>
                 <!-- END new lines  -->
                 </li>
@@ -312,7 +311,7 @@ session_start();
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="http://egp.mofed.gov.et/registration/login"
                                 target="_blank">eGP</a></li>
-                        <li><a class="dropdown-item" href="#" target="_blank">ICMIS</a></li>
+                        <li><a class="dropdown-item" href="https://smartofficedev.moa.gov.et/login" target="_blank">Smart office</a></li>
                         <li><a class="dropdown-item" href="https://icsmiscscp.ecsc.gov.et/icsmiscsc/portal/Login.aspx"
                                 target="_blank">ICMIS</a></li>
                         <li><a class="dropdown-item" href="https://fms.ppa.gov.et/m/SignIn" target="_blank">eFleet</a>
@@ -383,10 +382,11 @@ session_start();
                             style="background-color: rgba(52, 94, 140, 0.7); align-content: justify;">
                             <div class="container py-1">
                                 <div class="row gy-4 gy-md-0 justify-content-center align-items-center">
-                                    <div class="col-md-8 d-md-flex text-center" style="height: 475px">
+                                    <div class="col-md-10 d-md-flex text-center" style="height: 470px">
                                         <div>
-                                            <img class="rounded img-fluid"
-                                                src="./assets/img/banner/needcollector 2019.jpg">
+                                            <a href="https://www.eservices.gov.et/en">
+                                                <img class="rounded img-fluid alig-center "
+                                                    src="./assets/img/banner/emp level p1.jpg"> </a>
                                         </div>
                                     </div>
                                 </div>
@@ -406,7 +406,7 @@ session_start();
                                         <div>
                                             <a href="https://www.eservices.gov.et/en">
                                                 <img class="rounded img-fluid alig-center "
-                                                    src="./assets/img/banner/eservice.jpg"> </a>
+                                                    src="./assets/img/banner/emp level p2.jpg"> </a>
                                         </div>
                                     </div>
                                 </div>
@@ -426,7 +426,7 @@ session_start();
                                         <div>
                                             <a href="https://icsmiscscp.ecsc.gov.et/icsmiscsc/Portal/Login.aspx">
                                                 <img class="rounded img-fluid alig-center fit-cover"
-                                                    src="./assets/img/banner/icmis.jpg"> </a>
+                                                    src="./assets/img/banner/emp level p3.jpg"> </a>
                                         </div>
                                     </div>
                                 </div>
@@ -446,7 +446,7 @@ session_start();
                                         <div>
                                             <a href="https://pms.moa.gov.et/login">
                                                 <img class="img-fluid"
-                                                    src="./assets/img/banner/MoA planning and performance.jpg">
+                                                    src="./assets/img/banner/emp level p4.jpg">
                                             </a>
                                         </div>
                                     </div>
@@ -466,7 +466,7 @@ session_start();
                                     <div class="col-md-10 d-md-flex text-center" style="height: 470px">
                                         <div>
                                             <img class="rounded img-fluid alig-center fit-cover"
-                                                src="./assets/img/banner/for portal.jpg">
+                                                src="./assets/img/banner/emp level p5.jpg">
                                         </div>
                                     </div>
                                 </div>
@@ -476,6 +476,26 @@ session_start();
                 </div>
 
                 <!-- carousel 6-->
+                <div class="carousel-item" data-bs-interval="30000">
+                    <div class="row">
+                        <div class="col-md-12 mb-6"
+                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify;">
+                            <div class="container py-2">
+                                <div class="row gy-4 gy-md-0 justify-content-center align-items-center">
+                                    <div class="col-md-10 d-md-flex text-center" style="height: 470px">
+                                        <div>
+                                            <a href="https://fms.ppa.gov.et/m/SignIn">
+                                                <img class="rounded img-fluid alig-center fit-cover"
+                                                    src="./assets/img/banner/emp level p5.jpg"> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- carousel 7-->
                 <div class="carousel-item" data-bs-interval="30000">
                     <div class="row">
                         <div class="col-md-12 mb-6"
@@ -523,26 +543,6 @@ session_start();
                                                 <!-- telegram -->
                                                 <i class="fab fa-telegram fa-2x" style="color: #0082ca;"></i>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- carousel 7-->
-                <div class="carousel-item" data-bs-interval="30000">
-                    <div class="row">
-                        <div class="col-md-12 mb-6"
-                            style="background-color: rgba(52, 94, 140, 0.7); align-content: justify;">
-                            <div class="container py-2">
-                                <div class="row gy-4 gy-md-0 justify-content-center align-items-center">
-                                    <div class="col-md-10 d-md-flex text-center" style="height: 470px">
-                                        <div>
-                                            <a href="https://fms.ppa.gov.et/m/SignIn">
-                                                <img class="rounded img-fluid alig-center fit-cover"
-                                                    src="./assets/img/banner/e-fleet.jpg"> </a>
                                         </div>
                                     </div>
                                 </div>

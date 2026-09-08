@@ -3,7 +3,8 @@ include('../../assets/fn/session.php');
 // include('../../assets/chqits/chqitsict.php');
 $status = $_SESSION['login_user'];
 $name = $_SESSION['fullName'];
-if ($status != "gs") {
+if($status!="user")
+{
     header("location: ./../../assets/fn/logout.php");
 }
 ?>
@@ -179,39 +180,36 @@ if ($status != "gs") {
                 </nav>
                 <div class="container-fluid">
                     <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                        <h3 class="text-dark mb-0">General Service</h3>
+                        <h3 class="text-dark mb-0"> Dashboard.</h3>
                         <?php if (isset($_SESSION['response'])) { ?>
                         <div class="alert alert-success alert-dismissible">
                             <b class="text-center">
                                 <?= $_SESSION['response']; ?>
                             </b>
                         </div>
-                        <?php
+                        <?php 
                         }
-                        unset($_SESSION['response']);
+                        unset($_SESSION['response']); 
                         ?>
                         <!-- </div> -->
-                        <a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#"><i
-                                class="fas fa-download fa-sm text-white-50"></i>&nbsp;Generate Report</a>
+                        <a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button"
+                            href="./storeIssue.php"><i class="fas fa-download fa-sm text-white-50"></i>&nbsp;Mobile CARD
+                        </a>
                     </div>
 
                     <div class="row">
                         <div class="col-lg-7 col-xl-12">
                             <div class="card shadow mb-4">
                                 <div class="card-header d-flex justify-content-between align-items-center">
-                                    <h6 class="text-primary fw-bold m-0">Mobile card Authorization</h6>
-                                    <!-- <div class="dropdown show no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" aria-expanded="true" data-bs-toggle="dropdown" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
-                                        <div class="dropdown-menu show shadow dropdown-menu-end animated--fade-in" data-bs-popper="none">
-                                            <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" href="#">View primary</a><a class="dropdown-item" href="#">Hide Message</a>
-                                            <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Delete Message&nbsp;</a>
-                                        </div>
-                                    </div> -->
+                                    <h6 class="text-primary fw-bold m-0">Tracking my request</h6>
+
                                 </div>
                                 <div class="card-body">
                                     <?php
-                                    include("../../assets/fn/config.php");
+                                    include("./../../assets/fn/config.php");
                                     // SQL query to select data from database
-                                    $sql = "SELECT * FROM card WHERE authorizedby='' ORDER BY rdate ASC";
+
+                                    $sql = "SELECT * FROM ictform WHERE requestedby='$name' ORDER BY requesteddate ASC";
                                     $res_data = mysqli_query($link, $sql);
                                     ?>
                                     <div class="table-responsive table mt-2" id="dataTable" role="grid"
@@ -219,38 +217,16 @@ if ($status != "gs") {
                                         <table class="table my-0" id="dataTable">
                                             <thead>
                                                 <tr>
-                                                    <th width="5%">#</th>
-                                                    <th width="10%">CR ID</th>
-                                                    <th width="20%">Req. By</th>
-                                                    <th width="15%">Last Month</th>
-                                                    <th width="15%">No Month</th>
-                                                    <th width="10%">Allowed</th>
-                                                    <th width="15%">Approved</th>
-                                                    <th width="10%">Action</th>
+                                                    <th>#</th>
+                                                    <th>Requested</th>
+                                                    <th>Description</th>
+                                                    <th>Problem Specification</th>
+                                                    <!-- <th>Amount</th> -->
+                                                    <th>Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <?php
-                                                    // Define an array with names as keys and their groups as values
-                                        $namesGroups = [
-                                            "Demessa Negera" => "10",
-                                            "Tewodros Alemu" => "9",
-                                            "Bizunesh Alemu" => "9",
-                                            
-                                            // Add more names and groups as needed
-                                        ];
-
-                                        // Function to check the group of a given name
-                                        function getGroup($name, $array) {
-                                            if (isset($array[$name])) {
-                                                return $array[$name];
-                                            } else {
-                                                return "Amount is not assigned";
-                                            }
-                                        }
-
-                                        // Example usage
-                                        
                                                 $i = 0;
                                                 while ($rows = mysqli_fetch_array($res_data)) {
                                                     $i += 1;
@@ -262,42 +238,35 @@ if ($status != "gs") {
                                                         <?= $i; ?>
                                                     </td>
                                                     <td>
-                                                        <?= $rows['crid']; ?>
+                                                        <?= $rows['requestedby']; ?>
                                                     </td>
                                                     <td>
-                                                        <?= $rows['FullName']; ?>
+                                                        <?= $rows['requesteddate']; ?>
                                                     </td>
                                                     <td>
-                                                        <?= $rows['lastMonth']; ?>
+                                                        <?= $rows['problem']; ?>
                                                     </td>
                                                     <td>
-                                                        <?= $rows['totalMonth']; ?>
+                                                        <?= $rows['maintainedby']; ?>
                                                     </td>
                                                     <td>
-                                                        <?php
-                                                            // $nameToCheck = $rows['FullName'];
-                                                            // echo '<h5 style="color: red;">'. getGroup($rows['FullName'], $namesGroups); '</h1>'
-                                                            
-                                                            ?>
-                                                    </td>
-                                                    <td>
-                                                        <?= ($rows['allowed'])*($rows['totalMonth']); ?>
-                                                    </td>
-                                                    <td>
-                                                        <a href="./../../assets/fn/cardauthorized?crid<?= $rows['crid']; ?>"
-                                                            type="button" data-bs-toggle="modal"
-                                                            data-bs-target="#editmodal">
-                                                            <i class="fas fa-pen text-primary"></i></a>&nbsp;
+                                                        <a
+                                                            href="./../../assets/fn/ictanswered.php?id=<?= $rows['id']?>">
+                                                            <i class="fas fa-check text-success"></i>&nbsp;
+                                                        </a>
 
-                                                        <a href="#?id=<?= $rows['crid'] ?>">
-                                                            <i class="fas fa-list"></i></a>&nbsp;
+                                                        <a href="./../pages/#.php?id=<?= $rows['id']; ?>">
+                                                            <i class="fas fa-recycle text-danger"></i>&nbsp;
+                                                        </a>
 
-                                                        <a href="#.php?id=<?= $rows['crid']; ?>">
-                                                            <i class="fas fa-recycle text-danger"></i></a>
+                                                        <a href="#.php?id=<?= $rows['id'];?>" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#editmodal">
+                                                            <i class="fas fa-pen text-primary"></i>
+                                                        </a>
 
                                                     </td>
                                                     <?php } ?>
-                                                    <!-- <tfoot>
+                                                    <tfoot>
                                                 <tr>
                                                     <td><strong>Name</strong></td>
                                                     <td><strong>Position</strong></td>
@@ -306,7 +275,7 @@ if ($status != "gs") {
                                                     <td><strong>Start date</strong></td>
                                                     <td><strong>Salary</strong></td>
                                                 </tr>
-                                            </tfoot> -->
+                                            </tfoot>
                                         </table>
                                     </div>
                                 </div>
@@ -315,11 +284,10 @@ if ($status != "gs") {
 
                     </div>
 
-
-
-
                 </div>
             </div>
+
+
             <!-- here is the ICT maintenance form -->
             <div class="modal" id="myModal">
                 <div class="modal-dialog">
@@ -337,7 +305,7 @@ if ($status != "gs") {
                                 <div class="form-group row">
                                     <div class="col-sm-8">
                                         <input name="fname" type="text" class="form-control" id="fname"
-                                            placeholder="Requested by">
+                                            placeholder="Requested by" value="<?php $name; ?>">
                                     </div>
                                     <div class="col-sm-4">
                                         <input name="requesteddate" type="date" class="form-control" id="requesteddate"
@@ -385,53 +353,58 @@ if ($status != "gs") {
             </div>
             <!-- ends of the ict maintenance modal form -->
 
-            <!-- Assign technician modal  -->
+            <!-- postpond confirmation modal  -->
             <div class="modal fade" id="editmodal" tabindex="-1" aria-labelledby="editmodalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header bg-primary text-white">
-                            <h5 class="modal-title" id="editmodalLabel">Authorize Request</h5>
+                            <h5 class="modal-title" id="editmodalLabel">Postpond Request</h5>
                             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                                 aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form method="POST" action="./../../assets/fn/cardauthorized.php">
-
-                                <div class="form-group row">
-
-                                    <div class="col-sm-6">
-                                        <input name="crid" type="text" class="form-control" id="crid"
-                                            placeholder="Request id">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input name="authorizeddate" type="date" class="form-control"
-                                            id="authorizeddate" placeholder="Date Assigned">
-                                    </div>
-
-                                </div><br>
-                                <div class="form-group row">
-                                    <!-- <div class="col-sm-4">
-                                        <input name="totalMonth" type="text" class="form-control" id="totalMonth"
-                                            placeholder="Request id">
-                                    </div> -->
-                                    <div class="col-sm-8">
-                                        <input name="authorizedby" type="text" class="form-control" id="authorizedby"
-                                            value="<?php echo $name; ?>">
-                                    </div>
+                            <form method="POST" action="./../../assets/fn/ictdeny.php">
+                                <!-- <div class="form-group row">
                                     <div class="col-sm-4">
-                                        <input name="totalAllowed" type="text" class="form-control" id="totalAllowed"
-                                            placeholder="Allowed Amount">
+                                        <input name="ids" type="text" class="form-control" id="ids"
+                                            placeholder="Requested by">
+                                    </div> 
+                                    <div class="col-sm-8">
+                                        <input name="fname" type="text" class="form-control" id="fname"
+                                            placeholder="Requested by">
+                                    </div>
+                                </div><br> -->
+                                <div class="form-group row">
+                                    <!-- <div class="col-sm-8">
+                                        <input name="fname" type="text" class="form-control" id="fname"
+                                            placeholder="Requested by">
+                                    </div> -->
+
+
+                                    <div class="col-sm-4">
+                                        <input name="ids" type="text" class="form-control" id="ids"
+                                            placeholder=<?php $rows['id'];?>>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <input name="reason" type="text" class="form-control" id="reason"
+                                            placeholder="Postpond reason">
                                     </div>
                                 </div><br>
-                                <div class="form-group row">
 
 
-                                </div><br>
+                                <!-- <div class="form-group row">
+                                    <div class="col-sm-12">
+
+                                        <label for="exampleFormControlTextarea1" class="form-label">Update the specified problem</label>
+                                        <textarea name="problem" class="form-control" id="problem" rows="3"></textarea>
+                                    </div>
+                                </div><br> -->
+
                                 <!-- here is the button area -->
                                 <div class="form-group row">
-
                                     <div class="col-sm-6">
-                                        <button type="submit" class="btn btn-success">Authorize Request</button>
+                                        <button type="submit" class="btn btn-success">Postpond</button>
+
                                     </div>
                                 </div><br>
 

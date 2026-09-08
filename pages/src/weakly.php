@@ -40,7 +40,58 @@ if ($status != "ict") {
 }
 ?>
 
+<?php
+// Database configuration
+$host = 'localhost';
+$db   = 'db_ahi';
+$user = 'root';
+$pass = '';
+$charset = 'utf8mb4';
 
+$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+$options = [
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+];
+
+try {
+    $pdo = new PDO($dsn, $user, $pass, $options);
+} catch (\PDOException $e) {
+    die("Database Connection Failed: " . $e->getMessage());
+}
+
+// 1. Get current rows per page (Default: 10)
+$limit = isset($_GET['limit']) && is_numeric($_GET['limit']) ? (int)$_GET['limit'] : 10;
+// Ensure limit is a positive integer to prevent invalid queries
+$limit = max(1, $limit); 
+
+// 2. Get current page number (Default: 1)
+$page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int)$_GET['page'] : 1;
+$page = max(1, $page);
+
+// 3. Calculate SQL OFFSET
+$offset = ($page - 1) * $limit;
+
+// 4. Get total number of records
+$totalRowsStmt = $pdo->query("SELECT COUNT(*) FROM ictform");
+$totalRows = $totalRowsStmt->fetchColumn();
+
+// 5. Calculate total pages
+$totalPages = ceil($totalRows / $limit);
+
+// Ensure page doesn't exceed total pages
+if ($page > $totalPages && $totalPages > 0) {
+    $page = $totalPages;
+    $offset = ($page - 1) * $limit;
+}
+
+// 6. Fetch records with LIMIT and OFFSET
+$stmt = $pdo->prepare("SELECT * FROM ictform ORDER BY id DESC LIMIT :limit OFFSET :offset");
+$stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
+$stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
+$stmt->execute();
+$records = $stmt->fetchAll();
+?>
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="en">
 
@@ -53,6 +104,40 @@ if ($status != "ict") {
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
     <link rel="stylesheet" href="./../../assets/fonts/fontawesome-all.min.css">
 </head>
+<style>
+.container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.controls { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+table { width: 100%; border-collapse: collapse; margin-bottom: 15px; }
+th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+th { background-color: #007bff; color: white; }
+tr:nth-child(even) { background-color: #f9f9f9; }
+.pagination {
+    display: flex;
+    gap: 5px;
+    list-style: none;
+    padding: 0;
+}
+
+.pagination a,
+.pagination span {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    color: #007bff;
+    border-radius: 4px;
+}
+
+.pagination .active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.pagination .disabled {
+    color: #ccc;
+    pointer-events: none;
+}
+</style>
 
 <body id="page-top">
     <div id="wrapper">
@@ -68,14 +153,14 @@ if ($status != "ict") {
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav text-light" id="accordionSidebar">
-                    <li class="nav-item"><a class="nav-link" href="index.php"><i
+                    <li class="nav-item"><a class="nav-link" href="./ict.php"><i
                                 class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="profile.php"><i
                                 class="fas fa-user"></i><span>Profile</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="./storeissue.php"><i
-                                class="fas fa-table"></i><span>Mobile card</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="table.php"><i
+                                class="fas fa-table"></i><span>Table</span></a></li>
                     <!-- <li class="nav-item"><a class="nav-link" href="login.php"><i class="far fa-user-circle"></i><span>Related Pages</span></a></li> -->
-                    <li class="nav-item"><a class="nav-link" href="register.php"><i 
+                    <li class="nav-item"><a class="nav-link" href="register.php"><i
                                 class="fas fa-user-circle"></i><span>Register</span></a></li>
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0"
@@ -195,10 +280,12 @@ if ($status != "ict") {
                                                 class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a>
                                         <a class="dropdown-item" href="#"><i
                                                 class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Settings</a>
-                                        <a class="dropdown-item" href="./weakly.php"><i
-                                                class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Service list</a>
-                                        <a class="dropdown-item" href="./detailservice.php"><i
-                                                class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Weakly Report</a>
+                                        <a class="dropdown-item" href="#"><i
+                                                class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Weakly
+                                            Service</a>
+                                        <a class="dropdown-item" href="#"><i
+                                                class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Activity
+                                            log</a>    
                                         <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#myModal"><i
                                                 class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;ICT
                                             Maintenance</a>
@@ -212,22 +299,8 @@ if ($status != "ict") {
                     </div>
                 </nav>
                 <div class="container-fluid">
-                    <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                        <h3 class="text-dark mb-0">Dashboard</h3>
-                        <?php if (isset($_SESSION['response'])) { ?>
-                            <div class="alert alert-success alert-dismissible">
-                                <b class="text-center">
-                                    <?= $_SESSION['response']; ?>
-                                </b>
-                            </div>
-                            <?php
-                        }
-                        unset($_SESSION['response']);
-                        ?>
-                        <!-- </div> -->
-                        <a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="./feedback.php"><i
-                                class="fas fa-download fa-sm text-white-50"></i>&nbsp;View Feedback</a>
-                    </div>
+
+                    <!-- total report on ict service -->
                     <div class="row">
                         <div class="col-md-6 col-xl-3 mb-4">
                             <div class="card shadow border-left-primary py-2">
@@ -236,7 +309,8 @@ if ($status != "ict") {
                                         <div class="col me-2">
                                             <div class="text-uppercase text-primary fw-bold text-xs mb-1"><span>PC
                                                     Mainenance</span></div>
-                                            <div class="text-dark fw-bold h5 mb-0"><span><?php echo $count_computer;?></span></div>
+                                            <div class="text-dark fw-bold h5 mb-0">
+                                                <span><?php echo $count_computer;?></span></div>
                                         </div>
                                         <div class="col-auto"><i class="fas fa-cart-arrow-down fa-2x text-gray-300"></i>
                                         </div>
@@ -252,7 +326,8 @@ if ($status != "ict") {
                                             <div class="text-uppercase text-success fw-bold text-xs mb-1">
                                                 <span>Networking</span>
                                             </div>
-                                            <div class="text-dark fw-bold h5 mb-0"><span><?php echo $count_networking;?></span></div>
+                                            <div class="text-dark fw-bold h5 mb-0">
+                                                <span><?php echo $count_networking;?></span></div>
                                         </div>
                                         <div class="col-auto"><i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
                                         </div>
@@ -269,7 +344,8 @@ if ($status != "ict") {
                                                     Support</span></div>
                                             <div class="row g-0 align-items-center">
                                                 <div class="col-auto">
-                                                    <div class="text-dark fw-bold h5 mb-0 me-3"><span><?php echo $count_system;?></span></div>
+                                                    <div class="text-dark fw-bold h5 mb-0 me-3">
+                                                        <span><?php echo $count_system;?></span></div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="progress progress-sm">
@@ -294,7 +370,8 @@ if ($status != "ict") {
                                         <div class="col me-2">
                                             <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span>Other
                                                     Requests</span></div>
-                                            <div class="text-dark fw-bold h5 mb-0"><span><?php echo $count_other;?></span></div>
+                                            <div class="text-dark fw-bold h5 mb-0">
+                                                <span><?php echo $count_other;?></span></div>
                                         </div>
                                         <div class="col-auto"><i class="fas fa-comments fa-2x text-gray-300"></i></div>
                                     </div>
@@ -306,19 +383,33 @@ if ($status != "ict") {
                         <div class="col-lg-7 col-xl-12">
                             <div class="card shadow mb-4">
                                 <div class="card-header d-flex justify-content-between align-items-center">
-                                    <h6 class="text-primary  fw-bold m-0">Customer requested service</h6>
+                                    <!-- <h6 class="text-primary fw-bold m-0">Assign Techniciam for requested service</h6> -->
                                     <!-- <div class="dropdown show no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" aria-expanded="true" data-bs-toggle="dropdown" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
                                         <div class="dropdown-menu show shadow dropdown-menu-end animated--fade-in" data-bs-popper="none">
-                                            <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" href="#">View primary</a><a class="dropdown-item" href="#">Hide Message</a>
-                                            <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Delete Message&nbsp;</a>
+                                            <p class="text-center dropdown-header">Team wise :</p>
+                                                <a class="dropdown-item" href="#">Networking & Maintenance</a>
+                                                <a class="dropdown-item" href="#">System & development</a>
+                                            <div class="dropdown-divider"></div>
+                                                <p class="text-center dropdown-header">Time wise :</p>
+                                            <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Weakly&nbsp;</a>
+                                                <a class="dropdown-item" href="#">Monthly&nbsp;</a>
+                                                <a class="dropdown-item" href="#">Quarterly&nbsp;</a>
+                                                <a class="dropdown-item" href="#">Semi-anually&nbsp;</a>
+                                                <a class="dropdown-item" href="#">Anually&nbsp;</a>
+
                                         </div>
                                     </div> -->
                                 </div>
-                                <div class="card-body">
+                                <!-- <div class="card-body">
                                     <?php
+                                    // include("./../../assets/fn/config.php");
                                     // SQL query to select data from database
-                                    $sql = "SELECT * FROM ictform WHERE maintainedby='' ORDER BY requesteddate desc";
-                                    $res_data = mysqli_query($link, $sql);
+                                    // $sqls = "SELECT * FROM ictform WHERE requesteddate BETWEEN CURDATE() - INTERVAL 7 DAY AND CURDATE()";
+                                    $sqls = "SELECT * FROM ictform WHERE DATE(requesteddate) >= CURDATE() - INTERVAL 7 DAY";
+;
+
+                                    $res_data = mysqli_query($link, $sqls);
                                     ?>
                                     <div class="table-responsive table mt-2" id="dataTables" role="grid"
                                         aria-describedby="dataTable_info">
@@ -326,12 +417,12 @@ if ($status != "ict") {
                                             <thead>
                                                 <tr>
                                                     <th width="5%">#</th>
-                                                    <th width="5%">R.ID</th>
                                                     <th width="20%">Req. By</th>
                                                     <th width="15%">Req. Date</th>
-                                                    <th width="25%">Problem Specification</th>
-                                                    <th width="10%">Progress</th>
-                                                    <th width="20%">Action</th>
+                                                    <th width="20%">Rec. Date</th>
+                                                    <th width="20%">Problem type</th>
+                                                    <th width="20%">Maintained by</th>
+                                                    
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -342,114 +433,10 @@ if ($status != "ict") {
                                                     ?>
 
                                                     <tr>
-                                                        <!-- <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar1.jpeg">Airi Satou</td> -->
                                                         <td>
                                                             <?= $i; ?>
                                                         </td>
-                                                        <td>
-                                                            <?= $rows['id']; ?>
-                                                        </td>
-                                                        <td>
-                                                            <?= $rows['requestedby']; ?>
-                                                        </td>
-                                                        <td>
-                                                            <?= $rows['requesteddate']; ?>
-                                                        </td>
-                                                        <td>
-                                                            <?= $rows['problem']; ?>
-                                                        </td>
-                                                        <td>
-                                                            <?= $rows['followups']; ?>
-                                                        </td>
-
-                                                        <td>
-                                                            <!-- <a
-                                                                href="./../../assets/fn/ictanswered.php?id=<?= $rows['id'] ?>">
-                                                                <i class="fas fa-check text-success"></i></a>&nbsp; -->
-
-                                                            <a href="./../../assets/fn/ictasignment?id<?= $rows['id']; ?>"
-                                                                type="button" data-bs-toggle="modal"
-                                                                data-bs-target="#editmodal">
-                                                                <i class="fas fa-pen text-primary"></i></a>&nbsp;
-
-                                                            <a href="#?id=<?= $rows['id'] ?>">
-                                                                <i class="fas fa-list"></i></a>&nbsp;
-
-                                                            <a href="./../../assets/fn/ictformdelet.php?id=<?= $rows['id']; ?>">
-                                                                <i class="fas fa-recycle text-danger" onclick="return confirm('Are you sure you want to delete this item?');"></i></a>
-
                                                         
-
-
-                                                        </td>
-                                                    <?php } ?>
-                                                    <!-- <tfoot>
-                                                <tr>
-                                                    <td><strong>Name</strong></td>
-                                                    <td><strong>Position</strong></td>
-                                                    <td><strong>Office</strong></td>
-                                                    <td><strong>Age</strong></td>
-                                                    <td><strong>Start date</strong></td>
-                                                    <td><strong>Salary</strong></td>
-                                                </tr>
-                                            </tfoot> -->
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- begining of the second list -->
-                    <div class="row">
-                        <div class="col-lg-7 col-xl-12">
-                            <div class="card shadow mb-4">
-                                <div class="card-header d-flex justify-content-between align-items-center">
-                                    <h6 class="text-primary fw-bold m-0">My service to deliver</h6>
-                                    <!-- <div class="dropdown show no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" aria-expanded="true" data-bs-toggle="dropdown" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
-                                        <div class="dropdown-menu show shadow dropdown-menu-end animated--fade-in" data-bs-popper="none">
-                                            <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" href="#">View primary</a><a class="dropdown-item" href="#">Hide Message</a>
-                                            <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Delete Message&nbsp;</a>
-                                        </div>
-                                    </div> -->
-                                </div>
-                                <div class="card-body">
-                                    <?php
-                                    // include("./../../assets/fn/config.php");
-                                    // SQL query to select data from database
-                                    $sqls = "SELECT * FROM ictform WHERE maintainedby='$name' AND followups!='Done' ORDER BY requesteddate ASC";
-                                    $res_datas = mysqli_query($link, $sqls);
-                                    ?>
-                                    <div class="table-responsive table mt-2" id="dataTable" role="grid"
-                                        aria-describedby="dataTable_info">
-                                        <table class="table my-0" id="dataTable">
-                                            <thead>
-                                                <tr>
-                                                    <th width="3%">#</th>
-                                                    <th width="12%">Req. By</th>
-                                                    <th width="15%">Req. Date</th>
-                                                    <th width="25%">Problem Specification</th>
-                                                    <th width="15%">Address</th>
-                                                    <th width="20%">Return To</th>
-                                                    <!-- <th width="10%">Return Date</th> -->
-                                                    <th width="8%">Actions</th>
-
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <?php
-                                                $i = 0;
-                                                while ($rows = mysqli_fetch_array($res_datas)) {
-                                                    $i += 1;
-                                                    ?>
-
-                                                    <tr>
-                                                        <!-- <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar1.jpeg">Airi Satou</td> -->
-                                                        <td>
-                                                            <?= $i; ?>
-                                                        </td>
-
                                                         <td>
                                                             <?= $rows['requestedby']; ?>
                                                         </td>
@@ -457,35 +444,117 @@ if ($status != "ict") {
                                                             <?= $rows['requesteddate']; ?>
                                                         </td>
                                                         <td>
-                                                            <?= $rows['problem']; ?>
+                                                            <?= $rows['receiveddate']; ?>
                                                         </td>
                                                         <td>
-                                                            <?= $rows['followups']; ?>
+                                                            <?= $rows['equipmenttype']; ?>
                                                         </td>
                                                         <td>
-                                                            <?= $rows['recivedby']; ?>
+                                                            <?= $rows['maintainedby']; ?>
                                                         </td>
-                                                      
-                                                        <td>
-                                                            <a
-                                                                href="./../../assets/fn/ictanswered.php?id=<?= $rows['id'] ?>">
-                                                                <i class="fas fa-check text-success"></i></a>
-                                                            
 
-                                                            <a href="./ictformedit.php?id=<?= $rows['id'] ?>">
-                                                                <i class="fas fa-pen text-danger"></i></a>&nbsp;
-                                                        </td>
+                                                       
                                                     <?php } ?>
-
+                                                    
                                         </table>
                                     </div>
+                                </div> -->
+
+                                <!-- begininng of new pagination -->
+                                <div class="container">
+
+                                    <!-- Controls Bar: Select Rows per Page -->
+                                    <div class="controls">
+                                        <form method="GET" action="">
+                                            <label for="limit">Show rows per page: </label>
+                                            <select name="limit" id="limit" onchange="this.form.submit()">
+                                                <option value="5" <?= $limit == 5 ? 'selected' : '' ?>>5</option>
+                                                <option value="10" <?= $limit == 10 ? 'selected' : '' ?>>10</option>
+                                                <option value="25" <?= $limit == 25 ? 'selected' : '' ?>>25</option>
+                                                <option value="50" <?= $limit == 50 ? 'selected' : '' ?>>50</option>
+                                                <option value="100" <?= $limit == 100 ? 'selected' : '' ?>>100</option>
+                                            </select>
+                                            <!-- Preserve page 1 when changing row limits -->
+                                            <input type="hidden" name="page" value="1">
+                                        </form>
+
+                                        <div>
+                                            Showing <strong><?= min($offset + 1, $totalRows) ?></strong> to
+                                            <strong><?= min($offset + $limit, $totalRows) ?></strong> of
+                                            <strong><?= $totalRows ?></strong> entries
+                                        </div>
+                                    </div>
+
+                                    <!-- Data Table -->
+
+                                    <table class="table my-0" id="dataTables">
+                                        <thead>
+                                            <tr>
+                                                <th width="5%">#</th>
+                                                <th width="20%">Req. By</th>
+                                                <th width="15%">Req. Date</th>
+                                                <th width="20%">Rec. Date</th>
+                                                <th width="20%">Problem type</th>
+                                                <th width="20%">Maintained by</th>
+
+                                            </tr>
+                                        </thead>
+
+
+                                        <tbody>
+                                            <?php if (!empty($records)): ?>
+                                            <?php foreach ($records as $row): ?>
+                                            <tr>
+                                                <td><?= number_format($i++) ?></td>
+                                                <td><?= htmlspecialchars($row['requestedby']) ?></td>
+                                                <td><?= htmlspecialchars($row['requesteddate']) ?></td>
+
+                                                <td><?= htmlspecialchars($row['receiveddate']) ?></td>
+                                                <td><?= htmlspecialchars($row['equipmenttype']) ?></td>
+                                                <td><?= htmlspecialchars($row['maintainedby']) ?></td>
+                                            </tr>
+                                            <?php endforeach; ?>
+                                            <?php else: ?>
+                                            <tr>
+                                                <td colspan="3">No records found.</td>
+                                            </tr>
+                                            <?php endif; ?>
+                                        </tbody>
+                                    </table>
+
+                                    <!-- Pagination Links -->
+                                    <ul class="pagination">
+                                        <!-- Previous Button -->
+                                        <?php if ($page > 1): ?>
+                                        <a href="?page=<?= $page - 1 ?>&limit=<?= $limit ?>">« Prev</a>
+                                        <?php else: ?>
+                                        <span class="disabled">« Prev</span>
+                                        <?php endif; ?>
+
+                                        <!-- Page Numbers -->
+                                        <?php for ($i = 1; $i <= $totalPages; $i++): ?>
+                                        <?php if ($i == $page): ?>
+                                        <span class="active"><?= $i ?></span>
+                                        <?php else: ?>
+                                        <a href="?page=<?= $i ?>&limit=<?= $limit ?>"><?= $i ?></a>
+                                        <?php endif; ?>
+                                        <?php endfor; ?>
+
+                                        <!-- Next Button -->
+                                        <?php if ($page < $totalPages): ?>
+                                        <a href="?page=<?= $page + 1 ?>&limit=<?= $limit ?>">Next »</a>
+                                        <?php else: ?>
+                                        <span class="disabled">Next »</span>
+                                        <?php endif; ?>
+                                    </ul>
                                 </div>
+                                <!-- ending of new pagination -->
+
                             </div>
                         </div>
-
                     </div>
 
-                    <!-- end of the second list  -->
+
 
 
                 </div>

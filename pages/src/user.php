@@ -178,7 +178,7 @@ if($status!="user")
                 </nav>
                 <div class="container-fluid">
                     <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                        <h3 class="text-dark mb-0">Users Dashboard.</h3>
+                        <h3 class="text-dark mb-0"> Dashboard.</h3>
                         <?php if (isset($_SESSION['response'])) { ?>
                             <div class="alert alert-success alert-dismissible">
                                 <b class="text-center">
@@ -283,6 +283,9 @@ if($status!="user")
                 
                 </div>
             </div>
+            
+
+
             <!-- here is the ICT maintenance form -->
             <div class="modal" id="myModal">
                 <div class="modal-dialog">

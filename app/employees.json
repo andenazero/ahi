@@ -1,0 +1,8 @@
+{
+    "Tewodros": { "name": "Tewodros Alemu", "allowed_cards": 10 },
+    "Demessa": { "name": "Demessa", "allowed_cards": 30 },
+    "Mariam": { "name": "Mariam Tewodros", "allowed_cards": 20 },
+    "sarahconnor": { "name": "Sarah Connor", "allowed_cards": 7 },
+    "michaelscott": { "name": "Michael Scott", "allowed_cards": 4 }
+    
+}
